@@ -9,8 +9,19 @@ test("exports the portfolio as accessible semantic HTML", () => {
   assert.match(html, /<h1[^>]*id="hero-title"[^>]*>NCC/);
   assert.match(html, /id="experience"/);
   assert.match(html, /id="focus"/);
+  assert.match(html, /id="work"/);
   assert.match(html, /id="principles"/);
   assert.match(html, /id="contact"/);
+});
+
+test("links public claims to runnable proof", () => {
+  assert.match(html, /NCC Engineering Portfolio/);
+  assert.match(html, /Next\.js static export hosted on GitHub Pages/);
+  assert.match(html, /href="https:\/\/tolkmislk\.github\.io\/"/);
+  assert.match(
+    html,
+    /href="https:\/\/github\.com\/TolkmisLK\/TolkmisLK\.github\.io"/,
+  );
 });
 
 test("contains honest public positioning without confidential claims", () => {

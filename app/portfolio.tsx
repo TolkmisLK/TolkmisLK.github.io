@@ -10,6 +10,7 @@ const copy = {
     nav: [
       ["Experience", "experience"],
       ["Focus", "focus"],
+      ["Work", "work"],
       ["Principles", "principles"],
       ["Contact", "contact"],
     ],
@@ -65,6 +66,20 @@ const copy = {
         ["AI Agents", "MCP", "Tool Calling", "LLM Integration"],
       ],
     ],
+    workLabel: "Selected work",
+    workTitle: "Public proof, presented with its engineering constraints.",
+    projectStatus: "Public · Production",
+    projectName: "NCC Engineering Portfolio",
+    projectDescription:
+      "The site you are viewing is the first public project in this profile: a deliberately scoped portfolio built as a bilingual, accessible static application with an automated delivery path.",
+    projectLive: "Open live site",
+    projectSource: "Review source",
+    projectProof: [
+      ["Architecture", "Next.js static export hosted on GitHub Pages"],
+      ["Quality gate", "Lint, type-check, production build, and rendered HTML tests"],
+      ["Product", "English and Chinese content with system-aware themes"],
+      ["Boundary", "No backend, analytics, runtime secrets, or confidential project data"],
+    ],
     principlesLabel: "Principles",
     principlesTitle:
       "Engineering quality is visible in the decisions, not the amount of machinery.",
@@ -91,6 +106,7 @@ const copy = {
     nav: [
       ["经验领域", "experience"],
       ["当前方向", "focus"],
+      ["公开作品", "work"],
       ["工程原则", "principles"],
       ["联系", "contact"],
     ],
@@ -133,6 +149,20 @@ const copy = {
         "构建工具、边界和评测清晰的可靠 LLM 集成。",
         ["AI Agents", "MCP", "Tool Calling", "LLM Integration"],
       ],
+    ],
+    workLabel: "公开作品",
+    workTitle: "用可验证成果展示工程能力与约束。",
+    projectStatus: "公开 · 已上线",
+    projectName: "NCC 工程师主页",
+    projectDescription:
+      "你正在浏览的网站是这份公开技术履历的第一个项目：一个保持范围克制、支持中英双语和无障碍访问，并具备自动化交付流程的静态应用。",
+    projectLive: "访问线上页面",
+    projectSource: "审查源代码",
+    projectProof: [
+      ["架构", "使用 Next.js 静态导出并托管于 GitHub Pages"],
+      ["质量门禁", "代码检查、类型检查、生产构建和渲染结果测试"],
+      ["产品体验", "中英文内容与跟随系统的深浅主题"],
+      ["系统边界", "不包含后端、分析服务、运行时密钥或保密项目数据"],
     ],
     principlesLabel: "工程原则",
     principlesTitle: "工程质量体现在判断中，而不是组件和工具的数量。",
@@ -333,6 +363,46 @@ export function Portfolio() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section id="work" className="section" aria-labelledby="work-title">
+          <div className="section-heading">
+            <p className="section-label">{content.workLabel}</p>
+            <h2 id="work-title">{content.workTitle}</h2>
+          </div>
+          <article className="work-card">
+            <div className="work-summary">
+              <p className="work-kicker">{content.projectStatus}</p>
+              <h3>{content.projectName}</h3>
+              <p>{content.projectDescription}</p>
+              <div className="work-actions">
+                <a
+                  className="primary-link"
+                  href="https://tolkmislk.github.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {content.projectLive} ↗
+                </a>
+                <a
+                  className="secondary-link"
+                  href="https://github.com/TolkmisLK/TolkmisLK.github.io"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {content.projectSource} ↗
+                </a>
+              </div>
+            </div>
+            <dl className="work-proof">
+              {content.projectProof.map(([label, value]) => (
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
         </section>
 
         <section
