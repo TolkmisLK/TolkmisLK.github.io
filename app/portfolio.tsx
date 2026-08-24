@@ -99,7 +99,7 @@ const copy = {
           ["Architecture", "Next.js static export hosted on GitHub Pages"],
           ["Quality gate", "Lint, type-check, production build, and rendered HTML tests"],
           ["Product", "English and Chinese content with system-aware themes"],
-          ["Boundary", "No backend, analytics, runtime secrets, or confidential project data"],
+          ["Delivery", "Static output published through review-gated GitHub Pages automation"],
         ],
       },
     ],
@@ -117,7 +117,7 @@ const copy = {
     contactCopy:
       "Explore the public work above or follow new engineering progress on GitHub.",
     contactAction: "Open GitHub profile",
-    footer: "Built with deliberate scope and no invented project claims.",
+    footer: "Built to make engineering decisions and public work easy to review.",
     localeLabel: "切换为中文",
     theme: {
       system: "Theme: system",
@@ -206,7 +206,7 @@ const copy = {
           ["架构", "使用 Next.js 静态导出并托管于 GitHub Pages"],
           ["质量门禁", "代码检查、类型检查、生产构建和渲染结果测试"],
           ["产品体验", "中英文内容与跟随系统的深浅主题"],
-          ["系统边界", "不包含后端、分析服务、运行时密钥或保密项目数据"],
+          ["交付流程", "静态产物通过审查门禁与 GitHub Pages 自动发布"],
         ],
       },
     ],
@@ -223,7 +223,7 @@ const copy = {
     contactCopy:
       "可以查看上方公开作品，或通过 GitHub 关注后续工程进展。",
     contactAction: "打开 GitHub 主页",
-    footer: "保持克制，不使用虚构项目包装技术履历。",
+    footer: "让工程决策与公开作品易于理解、验证和审查。",
     localeLabel: "Switch to English",
     theme: {
       system: "主题：跟随系统",
