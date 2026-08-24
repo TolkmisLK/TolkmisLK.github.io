@@ -112,6 +112,7 @@ a:focus-visible {
 .nav,
 .header-actions,
 .hero-actions,
+.work-actions,
 .capability-list,
 .footer-links {
   display: flex;
@@ -392,6 +393,75 @@ a:focus-visible {
   font-weight: 760;
 }
 
+.work-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(36px, 7vw, 84px);
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.work-summary {
+  align-self: center;
+}
+
+.work-kicker {
+  margin: 0 0 18px;
+  color: var(--accent);
+  font: 750 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.work-summary h3 {
+  margin: 0 0 18px;
+  font-size: clamp(1.9rem, 4vw, 3.35rem);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+
+.work-summary > p:not(.work-kicker) {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.work-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.work-proof {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.work-proof div {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.35fr) minmax(0, 0.65fr);
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.work-proof dt {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.work-proof dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .principles-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -465,6 +535,7 @@ a:focus-visible {
   .section-heading,
   .experience-grid,
   .focus-grid,
+  .work-card,
   .principles-grid {
     grid-template-columns: 1fr;
   }
@@ -496,6 +567,16 @@ a:focus-visible {
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .work-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .work-proof div {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .primary-link,
