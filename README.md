@@ -4,7 +4,7 @@
 
 ## English
 
-A bilingual, static engineering portfolio for NCC. The site presents six years of software development experience without exposing confidential employers, clients, or project details.
+A bilingual, static engineering portfolio for NCC, presenting six years of software development experience and verifiable public engineering work.
 
 **Live site:** [tolkmislk.github.io](https://tolkmislk.github.io/)
 
@@ -39,7 +39,7 @@ The build produces a static site in `out/`.
 
 ### Architecture
 
-The site uses Next.js App Router with static export. Public content is defined locally in a client component so language and theme preferences remain device-local. There is no backend, database, authentication, analytics, or runtime secret.
+The site uses Next.js App Router with static export. Public content is defined locally in a client component, while language and theme preferences remain device-local.
 
 ### Deployment
 
@@ -47,7 +47,7 @@ The workflow in `.github/workflows/pages.yml` validates pull requests and deploy
 
 ## 中文
 
-这是 NCC 的中英文个人工程主页。网站用于展示六年软件开发经验，同时避免公开公司、客户及商业项目的敏感信息。
+这是 NCC 的中英文个人工程主页，用于呈现六年软件开发经验与可验证的公开工程作品。
 
 **线上地址：** [tolkmislk.github.io](https://tolkmislk.github.io/)
 
@@ -82,7 +82,7 @@ npm test
 
 ### 架构说明
 
-项目使用 Next.js App Router 静态导出。公开内容维护在本地组件中，语言与主题偏好仅保存在访问者设备中。项目不包含后端、数据库、认证、分析服务或运行时密钥。
+项目使用 Next.js App Router 静态导出。页面内容维护在本地组件中，语言与主题偏好保存在访问者设备中。
 
 ### 部署
 
