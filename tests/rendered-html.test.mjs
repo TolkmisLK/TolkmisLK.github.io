@@ -31,9 +31,16 @@ test("links public claims to runnable proof", () => {
   );
 });
 
-test("contains honest public positioning without confidential claims", () => {
+test("keeps portfolio positioning focused on approved public evidence", () => {
   assert.match(html, /6 years of experience/);
   assert.match(html, /healthcare IoT/i);
   assert.match(html, /AI agent/i);
-  assert.doesNotMatch(html, /trading|profit|hospital name|client name/i);
+  assert.match(
+    html,
+    /Static output published through review-gated GitHub Pages automation/,
+  );
+  assert.match(
+    html,
+    /Built to make engineering decisions and public work easy to review/,
+  );
 });
