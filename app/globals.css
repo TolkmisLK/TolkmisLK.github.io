@@ -393,6 +393,11 @@ a:focus-visible {
   font-weight: 760;
 }
 
+.work-list {
+  display: grid;
+  gap: 22px;
+}
+
 .work-card {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
