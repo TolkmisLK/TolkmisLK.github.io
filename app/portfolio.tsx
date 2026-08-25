@@ -70,10 +70,10 @@ const copy = {
     workTitle: "Public proof, presented with its engineering constraints.",
     projects: [
       {
-        status: "Public · v0.1",
+        status: "Public · v0.2",
         name: "Reliable Webhook Delivery Platform",
         description:
-          "A production-style delivery control plane that accepts events idempotently, persists work, signs exact payloads, and makes retries and failures visible.",
+          "A production-style delivery control plane that accepts events idempotently, persists work, signs exact payloads, and makes retry recovery and committed attempt history observable.",
         primaryAction: "Review source",
         primaryHref:
           "https://github.com/TolkmisLK/webhook-delivery-platform",
@@ -84,7 +84,8 @@ const copy = {
           ["Architecture", "Java 21 modular backend, React console, and durable PostgreSQL queue"],
           ["Reliability", "Endpoint-scoped idempotency, leases, bounded retries, and manual replay"],
           ["Security", "AES-GCM secrets, HMAC-SHA256 delivery, and SSRF-aware URL policy"],
-          ["Quality gate", "11 unit and architecture tests, Testcontainers end-to-end flow, OpenAPI, and CI"],
+          ["Observability", "Committed attempt timeline, after-commit Micrometer metrics, and structured logs"],
+          ["Quality gate", "12 unit and architecture tests, 2 PostgreSQL integration scenarios, OpenAPI, and CI"],
         ],
       },
       {
@@ -195,10 +196,10 @@ const copy = {
     workTitle: "用可验证成果展示工程能力与约束。",
     projects: [
       {
-        status: "公开 · v0.1",
+        status: "公开 · v0.2",
         name: "可靠 Webhook 投递平台",
         description:
-          "生产风格的投递控制面：幂等接收事件、持久化任务、对原始载荷签名，并让重试与失败状态可观测。",
+          "生产风格的投递控制面：幂等接收事件、持久化任务、对原始载荷签名，并让重试恢复与已提交尝试历史可观测。",
         primaryAction: "审查源代码",
         primaryHref:
           "https://github.com/TolkmisLK/webhook-delivery-platform",
@@ -209,7 +210,8 @@ const copy = {
           ["架构", "Java 21 模块化后端、React 运维台与 PostgreSQL 持久化队列"],
           ["可靠性", "端点级幂等、任务租约、有界重试与人工重放"],
           ["安全", "AES-GCM 密钥加密、HMAC-SHA256 投递签名与 SSRF URL 策略"],
-          ["质量门禁", "11 项单元与架构测试、Testcontainers 端到端链路、OpenAPI 与 CI"],
+          ["可观测性", "已提交尝试时间线、事务提交后 Micrometer 指标与结构化日志"],
+          ["质量门禁", "12 项单元与架构测试、2 条 PostgreSQL 集成场景、OpenAPI 与 CI"],
         ],
       },
       {
