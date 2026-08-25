@@ -197,9 +197,9 @@ const copy = {
     projects: [
       {
         status: "公开 · v0.2",
-        name: "可靠 Webhook 投递平台",
+        name: "可靠 Webhook 推送平台",
         description:
-          "生产风格的投递控制面：幂等接收事件、持久化任务、对原始载荷签名，并让重试恢复与已提交尝试历史可观测。",
+          "生产风格的 Webhook 推送控制面：幂等接收事件、持久化任务、对原始载荷签名，并让重试恢复与已提交尝试历史可观测。",
         primaryAction: "审查源代码",
         primaryHref:
           "https://github.com/TolkmisLK/webhook-delivery-platform",
@@ -209,7 +209,7 @@ const copy = {
         proof: [
           ["架构", "Java 21 模块化后端、React 运维台与 PostgreSQL 持久化队列"],
           ["可靠性", "端点级幂等、任务租约、有界重试与人工重放"],
-          ["安全", "AES-GCM 密钥加密、HMAC-SHA256 投递签名与 SSRF URL 策略"],
+          ["安全", "AES-GCM 密钥加密、HMAC-SHA256 推送签名与 SSRF URL 策略"],
           ["可观测性", "已提交尝试时间线、事务提交后 Micrometer 指标与结构化日志"],
           ["质量门禁", "12 项单元与架构测试、2 条 PostgreSQL 集成场景、OpenAPI 与 CI"],
         ],
