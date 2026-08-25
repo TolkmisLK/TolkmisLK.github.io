@@ -15,6 +15,16 @@ test("exports the portfolio as accessible semantic HTML", () => {
 });
 
 test("links public claims to runnable proof", () => {
+  assert.match(html, /Reliable Webhook Delivery Platform/);
+  assert.match(html, /durable PostgreSQL queue/);
+  assert.match(
+    html,
+    /href="https:\/\/github\.com\/TolkmisLK\/webhook-delivery-platform"/,
+  );
+  assert.match(
+    html,
+    /href="https:\/\/github\.com\/TolkmisLK\/webhook-delivery-platform\/blob\/main\/docs\/architecture\.md"/,
+  );
   assert.match(html, /MCP Trace Lab/);
   assert.match(html, /Transparent JSON-RPC forwarding with bidirectional backpressure/);
   assert.match(html, /href="https:\/\/github\.com\/TolkmisLK\/mcp-trace-lab"/);
