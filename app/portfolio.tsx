@@ -70,10 +70,10 @@ const copy = {
     workTitle: "Public proof, presented with its engineering constraints.",
     projects: [
       {
-        status: "Public · v0.2",
+        status: "Public · v0.3 released · v0.4 in development",
         name: "Reliable Webhook Delivery Platform",
         description:
-          "A production-style delivery control plane that accepts events idempotently, persists work, signs exact payloads, and makes retry recovery and committed attempt history observable.",
+          "A production-style webhook control plane with durable signed delivery, versioned Endpoint controls, race-safe queue cancellation, and commit-consistent operational visibility.",
         primaryAction: "Review source",
         primaryHref:
           "https://github.com/TolkmisLK/webhook-delivery-platform",
@@ -82,10 +82,11 @@ const copy = {
           "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/architecture.md",
         proof: [
           ["Architecture", "Java 21 modular backend, React console, and durable PostgreSQL queue"],
-          ["Reliability", "Endpoint-scoped idempotency, leases, bounded retries, and manual replay"],
+          ["Reliability", "Endpoint-scoped idempotency, leases, bounded retries, cancellation, and replay"],
           ["Security", "AES-GCM secrets, HMAC-SHA256 delivery, and SSRF-aware URL policy"],
-          ["Observability", "Committed attempt timeline, after-commit Micrometer metrics, and structured logs"],
-          ["Quality gate", "12 unit and architecture tests, 2 PostgreSQL integration scenarios, OpenAPI, and CI"],
+          ["Operations", "Versioned Endpoint activation, commit-consistent SSE, and after-commit audit logs"],
+          ["Observability", "Committed attempt timeline and bounded Prometheus queue-health signals"],
+          ["Quality gate", "21 unit and architecture tests, 5 PostgreSQL integration scenarios, frontend tests, OpenAPI, and CI"],
         ],
       },
       {
@@ -196,10 +197,10 @@ const copy = {
     workTitle: "用可验证成果展示工程能力与约束。",
     projects: [
       {
-        status: "公开 · v0.2",
+        status: "公开 · v0.3 已发布 · v0.4 建设中",
         name: "可靠 Webhook 推送平台",
         description:
-          "生产风格的 Webhook 推送控制面：幂等接收事件、持久化任务、对原始载荷签名，并让重试恢复与已提交尝试历史可观测。",
+          "生产风格的 Webhook 推送控制面：持久化签名推送、带版本的 Endpoint 控制、并发安全的任务取消，以及只反映已提交状态的运维可见性。",
         primaryAction: "审查源代码",
         primaryHref:
           "https://github.com/TolkmisLK/webhook-delivery-platform",
@@ -208,10 +209,11 @@ const copy = {
           "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/architecture.md",
         proof: [
           ["架构", "Java 21 模块化后端、React 运维台与 PostgreSQL 持久化队列"],
-          ["可靠性", "端点级幂等、任务租约、有界重试与人工重放"],
+          ["可靠性", "端点级幂等、任务租约、有界重试、任务取消与人工重投"],
           ["安全", "AES-GCM 密钥加密、HMAC-SHA256 推送签名与 SSRF URL 策略"],
-          ["可观测性", "已提交尝试时间线、事务提交后 Micrometer 指标与结构化日志"],
-          ["质量门禁", "12 项单元与架构测试、2 条 PostgreSQL 集成场景、OpenAPI 与 CI"],
+          ["运维控制", "带版本的 Endpoint 启停、提交一致的 SSE 与提交后审计日志"],
+          ["可观测性", "已提交尝试时间线与低基数 Prometheus 队列健康信号"],
+          ["质量门禁", "21 项单元与架构测试、5 条 PostgreSQL 集成场景、前端测试、OpenAPI 与 CI"],
         ],
       },
       {
