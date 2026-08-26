@@ -17,11 +17,12 @@ test("exports the portfolio as accessible semantic HTML", () => {
 test("links public claims to runnable proof", () => {
   assert.match(html, /Reliable Webhook Delivery Platform/);
   assert.match(html, /durable PostgreSQL queue/);
-  assert.match(html, /Public · v0\.2/);
-  assert.match(html, /after-commit Micrometer metrics/);
+  assert.match(html, /Public · v0\.3 released · v0\.4 in development/);
+  assert.match(html, /commit-consistent SSE/);
+  assert.match(html, /bounded Prometheus queue-health signals/);
   assert.match(
     html,
-    /12 unit and architecture tests, 2 PostgreSQL integration scenarios/,
+    /21 unit and architecture tests, 5 PostgreSQL integration scenarios/,
   );
   assert.match(
     html,
