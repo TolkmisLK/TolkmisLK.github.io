@@ -7,269 +7,170 @@ type Theme = "system" | "light" | "dark";
 
 const copy = {
   en: {
-    nav: [
-      ["Experience", "experience"],
-      ["Focus", "focus"],
-      ["Work", "work"],
-      ["Principles", "principles"],
-      ["Contact", "contact"],
-    ],
-    role: "Software Engineer · 6 years of experience",
+    nav: [["Experience", "experience"], ["Technologies", "focus"], ["Projects", "work"], ["GitHub", "contact"]],
+    role: "Software engineer · 6 years of experience",
     title: "NCC",
-    subtitle: "Full-stack engineering. AI agent systems.",
-    intro:
-      "I build dependable software across cross-platform applications, enterprise management and auction systems, and healthcare IoT. My current focus is full-stack engineering and practical AI agent infrastructure.",
-    explore: "Explore experience",
-    github: "View GitHub",
-    signalLabel: "engineering.signal",
+    subtitle: "Full-stack development & AI agents",
+    intro: "I've worked on web and mobile apps, enterprise management and auction systems, and healthcare IoT integrations. These days, I'm focused on full-stack development and tools for AI agents.",
+    explore: "View projects",
+    github: "GitHub",
+    signalLabel: "Projects at a glance",
     signals: [
-      ["01", "Runnable", "Working software before decorative complexity."],
-      ["02", "Clear", "Architecture and decisions that are easy to understand."],
-      ["03", "Responsible", "Security and privacy treated as design inputs."],
+      ["01", "Webhook delivery", "Send events, retry failures, and inspect delivery history."],
+      ["02", "MCP tracing", "Record tool calls and check errors and response times."],
+      ["03", "Personal site", "A place for my background and project links."],
     ],
     experienceLabel: "Experience",
-    experienceTitle: "Six years across products, platforms, and connected systems.",
+    experienceTitle: "What I've worked on",
     experiences: [
-      [
-        "Cross-platform applications",
-        "Flutter and Vue-based applications shaped around practical product workflows.",
-      ],
-      [
-        "Enterprise platforms",
-        "Management systems that support structured, day-to-day business operations.",
-      ],
-      [
-        "Auction applications",
-        "Enterprise auction software built for clear workflows and operational use.",
-      ],
-      [
-        "Healthcare IoT",
-        "Device-connected software used in hospital environments, with an emphasis on reliable integration.",
-      ],
+      ["Web and mobile apps", "Application development with Flutter and Vue."],
+      ["Management systems", "Software for day-to-day business operations."],
+      ["Auction software", "Enterprise auction applications."],
+      ["Healthcare IoT", "Software integrations for devices used in hospitals."],
     ],
-    focusLabel: "Current focus",
-    focusTitle: "A pragmatic stack for end-to-end product delivery.",
+    focusLabel: "Technologies",
+    focusTitle: "What I work with",
     focus: [
-      [
-        "Product interfaces",
-        "Responsive, accessible experiences across web and mobile.",
-        ["TypeScript", "React", "Vue", "Flutter"],
-      ],
-      [
-        "Backend systems",
-        "Maintainable services, integrations, and operational workflows.",
-        ["Node.js", "Python", "Java", "Spring"],
-      ],
-      [
-        "AI engineering",
-        "Reliable LLM integrations with explicit tools, boundaries, and evaluation.",
-        ["AI Agents", "MCP", "Tool Calling", "LLM Integration"],
-      ],
+      ["Frontend", "Web interfaces and mobile applications.", ["TypeScript", "React", "Vue", "Flutter"]],
+      ["Backend", "APIs, application services, and system integrations.", ["Node.js", "Python", "Java", "Spring"]],
+      ["AI tools", "LLM integration, tool calling, and MCP debugging.", ["AI Agents", "MCP", "Tool Calling", "LLM Integration"]],
     ],
-    workLabel: "Selected work",
-    workTitle: "Public proof, presented with its engineering constraints.",
+    workLabel: "Projects",
+    workTitle: "Code and documentation",
     projects: [
       {
-        status: "Public · v0.3 released · v0.4 in development",
-        name: "Reliable Webhook Delivery Platform",
-        description:
-          "A production-style webhook control plane with durable signed delivery, versioned Endpoint controls, race-safe queue cancellation, and commit-consistent operational visibility.",
-        primaryAction: "Review source",
-        primaryHref:
-          "https://github.com/TolkmisLK/webhook-delivery-platform",
-        secondaryAction: "Read architecture",
-        secondaryHref:
-          "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/architecture.md",
+        status: "v1.0.0",
+        name: "Webhook Delivery Platform",
+        description: "Sends events to HTTP endpoints and retries failed requests. The web console lets you manage endpoints, inspect each delivery attempt, and replay jobs.",
+        primaryAction: "Source code",
+        primaryHref: "https://github.com/TolkmisLK/webhook-delivery-platform",
+        secondaryAction: "Architecture",
+        secondaryHref: "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/architecture.md",
         proof: [
-          ["Architecture", "Java 21 modular backend, React console, and durable PostgreSQL queue"],
-          ["Reliability", "Endpoint-scoped idempotency, leases, bounded retries, cancellation, and replay"],
-          ["Security", "AES-GCM secrets, HMAC-SHA256 delivery, and SSRF-aware URL policy"],
-          ["Operations", "Versioned Endpoint activation, commit-consistent SSE, and after-commit audit logs"],
-          ["Observability", "Committed attempt timeline and bounded Prometheus queue-health signals"],
-          ["Quality gate", "21 unit and architecture tests, 5 PostgreSQL integration scenarios, frontend tests, OpenAPI, and CI"],
+          ["Built with", "Java, Spring Boot, PostgreSQL, and React"],
+          ["Delivery", "Database queue, automatic retries, and signed HTTP requests"],
+          ["Console", "Endpoint settings, attempt history, cancellation, and replay"],
+          ["Try it", "Docker Compose includes a receiver that simulates failures"],
         ],
       },
       {
-        status: "Public · v0.1 MVP",
+        status: "v0.1.0 · Experimental",
         name: "MCP Trace Lab",
-        description:
-          "A local-first MCP stdio flight recorder that keeps protocol traffic transparent while producing redacted, reviewable traces for tool calls, failures, and latency.",
-        primaryAction: "Review source",
+        description: "Records traffic between an MCP client and a stdio server. Use the command-line summary to check which tools were called, what failed, and how long responses took.",
+        primaryAction: "Source code",
         primaryHref: "https://github.com/TolkmisLK/mcp-trace-lab",
-        secondaryAction: "Read architecture",
-        secondaryHref:
-          "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/architecture.md",
+        secondaryAction: "Architecture",
+        secondaryHref: "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/architecture.md",
         proof: [
-          ["Architecture", "TypeScript and Node.js CLI with zero runtime dependencies"],
-          ["Protocol", "Transparent JSON-RPC forwarding with bidirectional backpressure"],
-          ["Security", "Recursive redaction; malformed payloads persist only as fingerprints"],
-          ["Quality gate", "Strict types, 11 unit and integration tests, build, and CI"],
+          ["Built with", "TypeScript and Node.js"],
+          ["Recording", "Forwards the original stream and saves JSONL traces locally"],
+          ["Output", "Text or JSON summaries of calls, errors, and timing"],
+          ["Scope", "stdio only; sensitive fields can be redacted by key name"],
         ],
       },
       {
-        status: "Public · Production",
-        name: "NCC Engineering Portfolio",
-        description:
-          "The site you are viewing is a deliberately scoped portfolio built as a bilingual, accessible static application with an automated delivery path.",
-        primaryAction: "Open live site",
-        primaryHref: "https://tolkmislk.github.io/",
-        secondaryAction: "Review source",
-        secondaryHref: "https://github.com/TolkmisLK/TolkmisLK.github.io",
+        status: "Online",
+        name: "NCC — Personal site",
+        description: "My background and project links in one place. You can switch between English and Chinese, or choose a light or dark theme.",
+        primaryAction: "Source code",
+        primaryHref: "https://github.com/TolkmisLK/TolkmisLK.github.io",
+        secondaryAction: "Setup instructions",
+        secondaryHref: "https://github.com/TolkmisLK/TolkmisLK.github.io#readme",
         proof: [
-          ["Architecture", "Next.js static export hosted on GitHub Pages"],
-          ["Quality gate", "Lint, type-check, production build, and rendered HTML tests"],
-          ["Product", "English and Chinese content with system-aware themes"],
-          ["Delivery", "Static output published through review-gated GitHub Pages automation"],
+          ["Built with", "Next.js and TypeScript"],
+          ["Hosting", "Static pages deployed to GitHub Pages"],
         ],
       },
     ],
-    principlesLabel: "Principles",
-    principlesTitle:
-      "Engineering quality is visible in the decisions, not the amount of machinery.",
-    principles: [
-      ["Make it run", "Deliver a coherent, reproducible path before expanding scope."],
-      ["Make it clear", "Prefer understandable boundaries, naming, and documentation."],
-      ["Make it testable", "Protect meaningful behavior with proportionate automated checks."],
-      ["Make it responsible", "Treat failure modes, privacy, and security as first-class concerns."],
-    ],
-    contactLabel: "Contact",
-    contactTitle: "Let’s build software that earns trust.",
-    contactCopy:
-      "Explore the public work above or follow new engineering progress on GitHub.",
-    contactAction: "Open GitHub profile",
-    footer: "Built to make engineering decisions and public work easy to review.",
+    contactLabel: "GitHub",
+    contactTitle: "Find me on GitHub",
+    contactCopy: "For project questions or bug reports, open an issue in the relevant repository.",
+    contactAction: "GitHub profile",
     localeLabel: "切换为中文",
-    theme: {
-      system: "Theme: system",
-      light: "Theme: light",
-      dark: "Theme: dark",
-    },
+    theme: { system: "Theme: system", light: "Theme: light", dark: "Theme: dark" },
   },
   zh: {
-    nav: [
-      ["经验领域", "experience"],
-      ["当前方向", "focus"],
-      ["公开作品", "work"],
-      ["工程原则", "principles"],
-      ["联系", "contact"],
-    ],
+    nav: [["开发经历", "experience"], ["技术栈", "focus"], ["项目", "work"], ["GitHub", "contact"]],
     role: "软件开发工程师 · 6 年开发经验",
     title: "NCC",
-    subtitle: "全栈工程与 AI Agent 系统",
-    intro:
-      "我长期参与跨平台应用、企业管理与拍卖系统、医疗物联网软件的开发。目前专注于全栈工程，以及具备清晰边界和可靠性的 AI Agent 基础设施。",
-    explore: "查看经验领域",
-    github: "访问 GitHub",
-    signalLabel: "engineering.signal",
+    subtitle: "全栈开发与 AI Agent",
+    intro: "做过 Web 和移动端应用、企业管理与拍卖系统，以及医疗物联网集成。目前主要关注全栈开发，以及 AI Agent 相关工具。",
+    explore: "查看项目",
+    github: "GitHub",
+    signalLabel: "项目概览",
     signals: [
-      ["01", "可运行", "先交付真正可用的软件，再增加装饰性复杂度。"],
-      ["02", "可理解", "让架构、边界和技术决策易于理解。"],
-      ["03", "负责任", "把安全与隐私作为设计输入，而不是事后补充。"],
+      ["01", "Webhook 推送", "发送事件，重试失败请求，查看推送记录。"],
+      ["02", "MCP 调试", "记录工具调用，排查错误和响应耗时。"],
+      ["03", "个人网站", "整理开发经历和项目链接。"],
     ],
-    experienceLabel: "经验领域",
-    experienceTitle: "六年经验，覆盖产品、企业平台与设备连接系统。",
+    experienceLabel: "开发经历",
+    experienceTitle: "做过哪些项目",
     experiences: [
-      ["跨平台应用", "围绕真实产品流程开发 Flutter 与 Vue 应用。"],
-      ["企业管理平台", "支持日常业务运转与结构化流程的企业管理系统。"],
-      ["企业拍卖应用", "面向清晰业务流程与实际运营场景的企业级拍卖软件。"],
-      ["医疗物联网", "应用于医院环境的设备连接软件，重视可靠集成。"],
+      ["Web 与移动端应用", "使用 Flutter 和 Vue 开发应用。"],
+      ["企业管理系统", "支持企业日常业务的管理软件。"],
+      ["拍卖软件", "面向企业的拍卖应用。"],
+      ["医疗物联网", "医院设备相关的软件集成。"],
     ],
-    focusLabel: "当前方向",
-    focusTitle: "用务实的技术组合完成端到端产品交付。",
+    focusLabel: "技术栈",
+    focusTitle: "使用的技术",
     focus: [
-      [
-        "产品界面",
-        "构建响应式、可访问的 Web 与移动端体验。",
-        ["TypeScript", "React", "Vue", "Flutter"],
-      ],
-      [
-        "后端系统",
-        "构建可维护的服务、系统集成与运行流程。",
-        ["Node.js", "Python", "Java", "Spring"],
-      ],
-      [
-        "AI 工程",
-        "构建工具、边界和评测清晰的可靠 LLM 集成。",
-        ["AI Agents", "MCP", "Tool Calling", "LLM Integration"],
-      ],
+      ["前端", "Web 界面和移动端应用开发。", ["TypeScript", "React", "Vue", "Flutter"]],
+      ["后端", "API、应用服务和系统集成。", ["Node.js", "Python", "Java", "Spring"]],
+      ["AI 工具", "大模型接入、工具调用和 MCP 调试。", ["AI Agents", "MCP", "Tool Calling", "LLM Integration"]],
     ],
-    workLabel: "公开作品",
-    workTitle: "用可验证成果展示工程能力与约束。",
+    workLabel: "项目",
+    workTitle: "代码与文档",
     projects: [
       {
-        status: "公开 · v0.3 已发布 · v0.4 建设中",
+        status: "v1.0.0",
         name: "可靠 Webhook 推送平台",
-        description:
-          "生产风格的 Webhook 推送控制面：持久化签名推送、带版本的 Endpoint 控制、并发安全的任务取消，以及只反映已提交状态的运维可见性。",
-        primaryAction: "审查源代码",
-        primaryHref:
-          "https://github.com/TolkmisLK/webhook-delivery-platform",
-        secondaryAction: "阅读架构文档",
-        secondaryHref:
-          "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/architecture.md",
+        description: "将事件推送到 HTTP 接口，失败后自动重试。可以在网页控制台管理接收地址、查看每次请求的结果，并手动重新推送。",
+        primaryAction: "查看代码",
+        primaryHref: "https://github.com/TolkmisLK/webhook-delivery-platform",
+        secondaryAction: "架构说明",
+        secondaryHref: "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/architecture.md",
         proof: [
-          ["架构", "Java 21 模块化后端、React 运维台与 PostgreSQL 持久化队列"],
-          ["可靠性", "端点级幂等、任务租约、有界重试、任务取消与人工重投"],
-          ["安全", "AES-GCM 密钥加密、HMAC-SHA256 推送签名与 SSRF URL 策略"],
-          ["运维控制", "带版本的 Endpoint 启停、提交一致的 SSE 与提交后审计日志"],
-          ["可观测性", "已提交尝试时间线与低基数 Prometheus 队列健康信号"],
-          ["质量门禁", "21 项单元与架构测试、5 条 PostgreSQL 集成场景、前端测试、OpenAPI 与 CI"],
+          ["技术栈", "Java、Spring Boot、PostgreSQL、React"],
+          ["推送处理", "数据库队列、自动重试、HTTP 请求签名"],
+          ["控制台", "接收地址设置、请求记录、任务取消和重新推送"],
+          ["本地运行", "Docker Compose 附带可模拟请求失败的接收服务"],
         ],
       },
       {
-        status: "公开 · v0.1 MVP",
+        status: "v0.1.0 · 实验阶段",
         name: "MCP Trace Lab",
-        description:
-          "本地优先的 MCP stdio 飞行记录器：保持协议流量透明转发，同时为工具调用、失败和耗时生成脱敏、可审查的追踪记录。",
-        primaryAction: "审查源代码",
+        description: "记录 MCP 客户端与 stdio 服务端之间的通信。通过命令行查看调用了哪些工具、哪些请求出错，以及响应花了多长时间。",
+        primaryAction: "查看代码",
         primaryHref: "https://github.com/TolkmisLK/mcp-trace-lab",
-        secondaryAction: "阅读架构文档",
-        secondaryHref:
-          "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/architecture.md",
+        secondaryAction: "架构说明",
+        secondaryHref: "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/architecture.md",
         proof: [
-          ["架构", "TypeScript 与 Node.js CLI，无运行时依赖"],
-          ["协议", "透明 JSON-RPC 转发，并处理双向背压"],
-          ["安全", "递归脱敏；畸形载荷只持久化指纹"],
-          ["质量门禁", "严格类型、11 项单元与集成测试、构建和 CI"],
+          ["技术栈", "TypeScript、Node.js"],
+          ["记录方式", "转发原始通信流，在本地保存 JSONL 记录"],
+          ["分析结果", "以文本或 JSON 输出调用、错误和耗时统计"],
+          ["支持范围", "目前仅支持 stdio，可按字段名配置脱敏"],
         ],
       },
       {
-        status: "公开 · 已上线",
-        name: "NCC 工程师主页",
-        description:
-          "你正在浏览的网站是一项保持范围克制、支持中英双语和无障碍访问，并具备自动化交付流程的静态应用。",
-        primaryAction: "访问线上页面",
-        primaryHref: "https://tolkmislk.github.io/",
-        secondaryAction: "审查源代码",
-        secondaryHref: "https://github.com/TolkmisLK/TolkmisLK.github.io",
+        status: "已上线",
+        name: "NCC 个人网站",
+        description: "集中介绍开发经历和项目，支持中英文切换、浅色和深色主题。",
+        primaryAction: "查看代码",
+        primaryHref: "https://github.com/TolkmisLK/TolkmisLK.github.io",
+        secondaryAction: "运行说明",
+        secondaryHref: "https://github.com/TolkmisLK/TolkmisLK.github.io#readme",
         proof: [
-          ["架构", "使用 Next.js 静态导出并托管于 GitHub Pages"],
-          ["质量门禁", "代码检查、类型检查、生产构建和渲染结果测试"],
-          ["产品体验", "中英文内容与跟随系统的深浅主题"],
-          ["交付流程", "静态产物通过审查门禁与 GitHub Pages 自动发布"],
+          ["技术栈", "Next.js、TypeScript"],
+          ["部署", "静态页面，托管在 GitHub Pages"],
         ],
       },
     ],
-    principlesLabel: "工程原则",
-    principlesTitle: "工程质量体现在判断中，而不是组件和工具的数量。",
-    principles: [
-      ["先让它运行", "先建立一致且可复现的运行路径，再扩展范围。"],
-      ["再让它清晰", "优先选择可理解的边界、命名和文档。"],
-      ["确保可测试", "使用与风险相匹配的自动化检查保护关键行为。"],
-      ["保持负责任", "认真对待故障、安全和隐私问题。"],
-    ],
-    contactLabel: "联系",
-    contactTitle: "一起构建值得信任的软件。",
-    contactCopy:
-      "可以查看上方公开作品，或通过 GitHub 关注后续工程进展。",
+    contactLabel: "GitHub",
+    contactTitle: "在 GitHub 找到我",
+    contactCopy: "项目使用问题或 Bug，可以在对应仓库提交 Issue。",
     contactAction: "打开 GitHub 主页",
-    footer: "让工程决策与公开作品易于理解、验证和审查。",
     localeLabel: "Switch to English",
-    theme: {
-      system: "主题：跟随系统",
-      light: "主题：浅色",
-      dark: "主题：深色",
-    },
+    theme: { system: "主题：跟随系统", light: "主题：浅色", dark: "主题：深色" },
   },
 } as const;
 
@@ -374,7 +275,7 @@ export function Portfolio() {
             </h1>
             <p className="hero-copy">{content.intro}</p>
             <div className="hero-actions">
-              <a className="primary-link" href="#experience">
+              <a className="primary-link" href="#work">
                 {content.explore}
               </a>
               <a
@@ -390,11 +291,10 @@ export function Portfolio() {
 
           <aside
             className="signal-card"
-            aria-label={locale === "en" ? "Engineering signals" : "工程信号"}
+            aria-label={locale === "en" ? "Project overview" : "项目概览"}
           >
             <div className="signal-card-header">
               <span>{content.signalLabel}</span>
-              <span className="status-dot" />
             </div>
             <ol className="signal-list">
               {content.signals.map(([index, title, description]) => (
@@ -496,25 +396,6 @@ export function Portfolio() {
         </section>
 
         <section
-          id="principles"
-          className="section"
-          aria-labelledby="principles-title"
-        >
-          <div className="section-heading">
-            <p className="section-label">{content.principlesLabel}</p>
-            <h2 id="principles-title">{content.principlesTitle}</h2>
-          </div>
-          <div className="principles-grid">
-            {content.principles.map(([title, description]) => (
-              <article className="principle" key={title}>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section
           id="contact"
           className="section"
           aria-labelledby="contact-title"
@@ -540,7 +421,6 @@ export function Portfolio() {
       <footer className="site-footer">
         <div className="site-shell footer-inner">
           <span>© {new Date().getFullYear()} NCC</span>
-          <span>{content.footer}</span>
           <div className="footer-links">
             <a className="text-link" href="#top">
               ↑ Top

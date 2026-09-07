@@ -7,57 +7,29 @@ const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8
 test("exports the portfolio as accessible semantic HTML", () => {
   assert.match(html, /<html[^>]+lang="en"/);
   assert.match(html, /<h1[^>]*id="hero-title"[^>]*>NCC/);
-  assert.match(html, /id="experience"/);
-  assert.match(html, /id="focus"/);
-  assert.match(html, /id="work"/);
-  assert.match(html, /id="principles"/);
-  assert.match(html, /id="contact"/);
+  for (const id of ["experience", "focus", "work", "contact"]) {
+    assert.ok(html.includes(`id="${id}"`));
+  }
+  for (const [, anchor] of html.matchAll(/href="#([^" ]+)"/g)) {
+    assert.ok(html.includes(`id="${anchor}"`), `Missing target: ${anchor}`);
+  }
 });
 
-test("links public claims to runnable proof", () => {
-  assert.match(html, /Reliable Webhook Delivery Platform/);
-  assert.match(html, /durable PostgreSQL queue/);
-  assert.match(html, /Public · v0\.3 released · v0\.4 in development/);
-  assert.match(html, /commit-consistent SSE/);
-  assert.match(html, /bounded Prometheus queue-health signals/);
-  assert.match(
-    html,
-    /21 unit and architecture tests, 5 PostgreSQL integration scenarios/,
-  );
-  assert.match(
-    html,
-    /href="https:\/\/github\.com\/TolkmisLK\/webhook-delivery-platform"/,
-  );
-  assert.match(
-    html,
-    /href="https:\/\/github\.com\/TolkmisLK\/webhook-delivery-platform\/blob\/main\/docs\/architecture\.md"/,
-  );
+test("links projects to their source and documentation", () => {
+  for (const repo of ["webhook-delivery-platform", "mcp-trace-lab"]) {
+    const url = `https://github.com/TolkmisLK/${repo}`;
+    assert.ok(html.includes(`href="${url}"`));
+    assert.ok(html.includes(`href="${url}/blob/main/docs/architecture.md"`));
+  }
+  assert.ok(html.includes('href="https://github.com/TolkmisLK/TolkmisLK.github.io"'));
+  assert.match(html, /Webhook Delivery Platform/);
   assert.match(html, /MCP Trace Lab/);
-  assert.match(html, /Transparent JSON-RPC forwarding with bidirectional backpressure/);
-  assert.match(html, /href="https:\/\/github\.com\/TolkmisLK\/mcp-trace-lab"/);
-  assert.match(
-    html,
-    /href="https:\/\/github\.com\/TolkmisLK\/mcp-trace-lab\/blob\/main\/docs\/architecture\.md"/,
-  );
-  assert.match(html, /NCC Engineering Portfolio/);
-  assert.match(html, /Next\.js static export hosted on GitHub Pages/);
-  assert.match(html, /href="https:\/\/tolkmislk\.github\.io\/"/);
-  assert.match(
-    html,
-    /href="https:\/\/github\.com\/TolkmisLK\/TolkmisLK\.github\.io"/,
-  );
 });
 
-test("keeps portfolio positioning focused on approved public evidence", () => {
+test("includes the developer introduction and language and theme controls", () => {
   assert.match(html, /6 years of experience/);
   assert.match(html, /healthcare IoT/i);
   assert.match(html, /AI agent/i);
-  assert.match(
-    html,
-    /Static output published through review-gated GitHub Pages automation/,
-  );
-  assert.match(
-    html,
-    /Built to make engineering decisions and public work easy to review/,
-  );
+  assert.match(html, /<button[^>]+aria-label="切换为中文"/);
+  assert.match(html, /<button[^>]+aria-label="Theme: system"/);
 });
