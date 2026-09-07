@@ -2,9 +2,9 @@
 
 [tolkmislk.github.io](https://tolkmislk.github.io/)
 
-My personal site, with a short introduction and links to my projects. Built with Next.js and hosted on GitHub Pages. Supports English and Chinese, with light and dark themes.
+My personal site, with a short introduction, two open-source projects, and my development background. Built with Next.js and hosted on GitHub Pages. Supports English and Chinese, with light and dark themes.
 
-我的个人网站，介绍开发经历和开源项目。使用 Next.js 构建，托管在 GitHub Pages，支持中英文切换和深浅主题。
+我的个人网站，介绍两个开源项目、开发经历和使用的技术。使用 Next.js 构建，托管在 GitHub Pages，支持中英文切换和深浅主题。
 
 ## Local development / 本地开发
 
@@ -33,6 +33,6 @@ The static output is written to `out/`. GitHub Actions checks pull requests and 
 - `app/globals.css`: Layout and styles. / 页面布局与样式。
 - `app/layout.tsx`: Page metadata. / 页面元信息。
 
-Language and theme preferences are saved in the visitor's browser.
+Language and theme preferences are saved in the visitor's browser when local storage is available. The controls also work when storage is blocked.
 
-语言和主题偏好保存在访问者的浏览器中。
+浏览器允许本地存储时会保存语言和主题偏好；禁用存储后，切换功能仍可使用。
