@@ -1,48 +1,46 @@
 import type { Metadata } from "next";
+import { site, assetUrl, defaultLocale, siteUrl } from "../lib/site";
 import "./globals.css";
 
+const profile = site[defaultLocale];
+const title = `${site.identity.name} — ${profile.subtitle}`;
+const images = site.identity.socialImage
+  ? [{ url: assetUrl(site.identity.socialImage), alt: site.identity.name }]
+  : [];
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tolkmislk.github.io"),
-  title: "NCC — Software Engineer",
-  description:
-    "NCC is a software engineer with six years of experience across cross-platform applications, enterprise systems, auction platforms, and healthcare IoT.",
-  keywords: [
-    "NCC",
-    "software engineer",
-    "full-stack engineer",
-    "Flutter",
-    "Vue",
-    "TypeScript",
-    "Python",
-    "Java",
-    "AI Agent",
-  ],
-  authors: [{ name: "NCC" }],
-  alternates: { canonical: "/" },
+  metadataBase: new URL(`${siteUrl}/`),
+  title,
+  description: profile.intro,
+  authors: [{ name: site.identity.name }],
+  alternates: { canonical: `${siteUrl}/` },
   openGraph: {
     type: "website",
-    url: "/",
-    title: "NCC — Software Engineer",
-    description:
-      "Six years of software engineering experience. Full-stack systems, healthcare IoT, and AI agents.",
-    siteName: "NCC Engineering Portfolio",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "NCC — Software Engineer" }],
+    url: `${siteUrl}/`,
+    title,
+    description: profile.intro,
+    siteName: site.identity.name,
+    images,
   },
   twitter: {
-    card: "summary_large_image",
-    title: "NCC — Software Engineer",
-    description:
-      "Six years of software engineering experience. Full-stack systems, healthcare IoT, and AI agents.",
-    images: ["/og.png"],
+    card: images.length ? "summary_large_image" : "summary",
+    title,
+    description: profile.intro,
+    images: images.map((image) => image.url),
   },
-  icons: { icon: "/icon.svg" },
+  ...(site.identity.favicon
+    ? { icons: { icon: assetUrl(site.identity.favicon) } }
+    : {}),
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang={defaultLocale === "zh" ? "zh-CN" : "en"}
+      suppressHydrationWarning
+    >
       <body>{children}</body>
     </html>
   );
