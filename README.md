@@ -4,9 +4,11 @@
 
 支持中英文切换、浅色和深色主题，也可以在手机上浏览。
 
-[看看页面长什么样](https://tolkmislk.github.io/) · [English guide](docs/README.en.md) · [空白配置示例](examples/site.example.json)
+[看看页面长什么样](https://tolkmislk.github.io/) · [English guide](docs/README.en.md) · [空白配置示例](examples/site.example.json) · [截图教程](docs/walkthrough.md)
 
 线上示例使用 NCC 的资料。复制后可以换成自己的名字、介绍、经历和项目。
+
+![个人网页模板中文示例](docs/images/preview-zh.jpg)
 
 ## 从这里开始
 
@@ -150,6 +152,12 @@ npm test
 | `app/layout.tsx` | 从配置生成网页元信息 |
 | `.github/workflows/pages.yml` | 检查并发布到 GitHub Pages |
 | `scripts/validate-site.mjs` | 检查配置，提示填写错误 |
+
+## 搭建时遇到问题
+
+打开 [Issues](https://github.com/TolkmisLK/TolkmisLK.github.io/issues/new/choose)，选择“网页搭建求助”。写下卡住的步骤、看到的提示，可以附上自己的公开仓库链接或失败的 Actions 运行地址。觉得教程有哪里说得不清楚，也可以选择“教程反馈”。
+
+[参与完善模板](CONTRIBUTING.md)
 
 ## 使用许可
 

@@ -1,0 +1,19 @@
+name: 教程反馈 / Guide feedback
+description: 哪一步不清楚，或者你最后是怎样完成的。
+title: '[教程反馈] '
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: 你的反馈 / Your feedback
+      description: 可以写第一次使用时卡住的地方、没解释清楚的词，或建议补充的步骤。 / Tell us where you got stuck or which explanation was missing.
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: 目前结果（选填） / Current result (optional)
+      options:
+        - 已经发布成功 / Published successfully
+        - 还在尝试 / Still working on it
+        - 只是阅读教程 / Only read the guide

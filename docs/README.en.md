@@ -4,7 +4,7 @@ Copy this repository, edit one configuration file, and publish your own page wit
 
 The page includes English and Chinese content, light and dark themes, and a mobile layout.
 
-[Live example](https://tolkmislk.github.io/) · [中文教程](../README.md) · [Starter configuration](../examples/site.example.json)
+[Live example](https://tolkmislk.github.io/) · [中文教程](../README.md) · [Starter configuration](../examples/site.example.json) · [Screenshot walkthrough](walkthrough.md)
 
 The live example uses NCC's profile. Replace it with your own name, background, and projects.
 
@@ -141,6 +141,10 @@ The static output is in `out/`. The site uses Next.js and has no backend, accoun
 | `app/layout.tsx` | Metadata from your profile |
 | `.github/workflows/pages.yml` | Checks and Pages deployment |
 | `scripts/validate-site.mjs` | Configuration checks |
+
+## Need help?
+
+Open [Issues](https://github.com/TolkmisLK/TolkmisLK.github.io/issues/new/choose) and choose **Setup help**. Describe where you got stuck and include your public repository or failed Actions run URL if useful. Choose **Guide feedback** for unclear instructions. [Contributing](../CONTRIBUTING.md)
 
 ## License
 

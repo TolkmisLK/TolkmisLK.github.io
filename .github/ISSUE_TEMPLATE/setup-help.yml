@@ -1,0 +1,38 @@
+name: 网页搭建求助 / Setup help
+description: 卡在哪一步，或者教程哪里没看懂，都可以在这里说。
+title: '[搭建求助] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不需要懂专业术语，按你看到的情况填写即可。请不要上传密码、令牌或含有这些内容的截图。
+        Describe what you see; technical terms are optional. Do not include passwords or tokens.
+  - type: dropdown
+    id: step
+    attributes:
+      label: 进行到哪一步 / Which step?
+      options:
+        - 复制仓库 / Copying the repository
+        - 设置 Pages / Configuring Pages
+        - 修改个人资料 / Editing the profile
+        - 保存与发布 / Saving and publishing
+        - 查看网页 / Opening the website
+        - 其他 / Something else
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 遇到了什么 / What happened?
+      description: 写下你点了哪里、希望看到什么、实际出现了什么。 / Describe your action, expected result, and actual result.
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: 自己的公开仓库或网页地址（选填） / Public repository or site URL (optional)
+  - type: textarea
+    id: details
+    attributes:
+      label: 报错或截图（选填） / Error or screenshot (optional)
+      description: 发布失败时，可以贴失败的 Actions 运行链接。 / For a failed deployment, include its Actions run URL.

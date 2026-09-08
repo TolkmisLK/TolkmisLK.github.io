@@ -25,8 +25,8 @@
         "description": "Sends events to HTTP endpoints and retries failed requests. The web console lets you manage endpoints, inspect each delivery attempt, and replay jobs.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
-        "secondaryAction": "Quick start",
-        "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform#quick-start",
+        "secondaryAction": "Try the demo",
+        "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/demo.md",
         "details": [
           ["Built with", "Java, Spring Boot, PostgreSQL, and React"],
           [
@@ -45,8 +45,8 @@
         "description": "Records traffic between an MCP client and a stdio server. Use the command-line summary to check which tools were called, what failed, and how long responses took.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
-        "secondaryAction": "Quick start",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab#quick-start--快速开始",
+        "secondaryAction": "Try the demo",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
         "details": [
           ["Built with", "TypeScript and Node.js"],
           ["Output", "Local JSONL traces with text or JSON summaries"],
@@ -92,8 +92,8 @@
         "description": "将事件推送到 HTTP 接口，失败后自动重试。可以在网页控制台管理接收地址、查看每次请求的结果，并手动重新推送。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
-        "secondaryAction": "运行说明",
-        "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform#快速开始",
+        "secondaryAction": "运行演示",
+        "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/demo.md",
         "details": [
           ["技术栈", "Java、Spring Boot、PostgreSQL、React"],
           ["投递方式", "至少一次投递，接收方需要处理重复事件"],
@@ -106,8 +106,8 @@
         "description": "记录 MCP 客户端与 stdio 服务端之间的通信。通过命令行查看调用了哪些工具、哪些请求出错，以及响应花了多长时间。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
-        "secondaryAction": "运行说明",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab#quick-start--快速开始",
+        "secondaryAction": "运行演示",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
         "details": [
           ["技术栈", "TypeScript、Node.js"],
           ["输出", "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"],
@@ -120,8 +120,8 @@
         "description": "可以用这套页面做自己的个人网站。教程从复制仓库开始，介绍如何修改资料和发布到 GitHub Pages。",
         "primaryAction": "获取模板",
         "primaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io",
-        "secondaryAction": "使用教程",
-        "secondaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io#从这里开始",
+        "secondaryAction": "截图教程",
+        "secondaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io/blob/main/docs/walkthrough.md",
         "details": [
           ["修改内容", "名字、介绍、经历和项目集中在一个 JSON 文件"],
           ["发布方式", "GitHub Pages"],
