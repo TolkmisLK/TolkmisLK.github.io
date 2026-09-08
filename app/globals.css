@@ -431,3 +431,7 @@ html[lang="zh-CN"] h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+.work-card--summary {
+  grid-template-columns: 1fr;
+}

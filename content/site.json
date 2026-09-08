@@ -1,0 +1,133 @@
+{
+  "identity": {
+    "name": "NCC",
+    "githubUsername": "TolkmisLK",
+    "repositoryName": "TolkmisLK.github.io",
+    "siteUrl": "https://tolkmislk.github.io",
+    "defaultLocale": "en",
+    "favicon": "/icon.svg",
+    "socialImage": "/og.png"
+  },
+  "en": {
+    "role": "Software engineer · 6 years of experience",
+    "subtitle": "Full-stack development & AI agents",
+    "intro": "I work on web and mobile apps, backend services, and tools for AI agents.",
+    "experienceCopy": "I've worked on Flutter and Vue applications, enterprise management and auction systems, and healthcare IoT integrations for hospitals.",
+    "focus": [
+      ["Frontend", ["TypeScript", "React", "Vue", "Flutter"]],
+      ["Backend", ["Node.js", "Python", "Java", "Spring"]],
+      ["AI tools", ["AI Agents", "MCP", "Tool Calling", "LLM Integration"]]
+    ],
+    "projects": [
+      {
+        "status": "v1.0.0",
+        "name": "Webhook Delivery Platform",
+        "description": "Sends events to HTTP endpoints and retries failed requests. The web console lets you manage endpoints, inspect each delivery attempt, and replay jobs.",
+        "primaryAction": "Source code",
+        "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
+        "secondaryAction": "Quick start",
+        "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform#quick-start",
+        "details": [
+          ["Built with", "Java, Spring Boot, PostgreSQL, and React"],
+          [
+            "Delivery",
+            "At-least-once: receivers need to handle duplicate events"
+          ],
+          [
+            "Try it",
+            "Docker Compose includes a receiver that simulates failures"
+          ]
+        ]
+      },
+      {
+        "status": "v0.1.0 · Experimental",
+        "name": "MCP Trace Lab",
+        "description": "Records traffic between an MCP client and a stdio server. Use the command-line summary to check which tools were called, what failed, and how long responses took.",
+        "primaryAction": "Source code",
+        "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
+        "secondaryAction": "Quick start",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab#quick-start--快速开始",
+        "details": [
+          ["Built with", "TypeScript and Node.js"],
+          ["Output", "Local JSONL traces with text or JSON summaries"],
+          ["Scope", "stdio only; sensitive fields can be redacted by key name"]
+        ]
+      },
+      {
+        "status": "Template",
+        "name": "Personal website template",
+        "description": "Use this site as a starting point for your own page. The guide covers copying the repository, editing your profile, and publishing with GitHub Pages.",
+        "primaryAction": "Get the template",
+        "primaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io",
+        "secondaryAction": "Setup guide",
+        "secondaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io/blob/main/docs/README.en.md",
+        "details": [
+          [
+            "Editing",
+            "Name, introduction, experience and projects in one JSON file"
+          ],
+          ["Publishing", "GitHub Pages"],
+          [
+            "Included",
+            "English and Chinese, light and dark themes, mobile layout"
+          ]
+        ]
+      }
+    ]
+  },
+  "zh": {
+    "role": "软件开发工程师 · 6 年开发经验",
+    "subtitle": "全栈开发与 AI Agent",
+    "intro": "我做 Web 和移动端应用，也写后端服务。目前主要关注 AI Agent 和 MCP 相关工具。",
+    "experienceCopy": "做过 Flutter 和 Vue 应用、企业管理与拍卖系统，以及医院设备相关的软件集成。",
+    "focus": [
+      ["前端", ["TypeScript", "React", "Vue", "Flutter"]],
+      ["后端", ["Node.js", "Python", "Java", "Spring"]],
+      ["AI 工具", ["AI Agents", "MCP", "Tool Calling", "LLM Integration"]]
+    ],
+    "projects": [
+      {
+        "status": "v1.0.0",
+        "name": "可靠 Webhook 推送平台",
+        "description": "将事件推送到 HTTP 接口，失败后自动重试。可以在网页控制台管理接收地址、查看每次请求的结果，并手动重新推送。",
+        "primaryAction": "查看代码",
+        "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
+        "secondaryAction": "运行说明",
+        "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform#快速开始",
+        "details": [
+          ["技术栈", "Java、Spring Boot、PostgreSQL、React"],
+          ["投递方式", "至少一次投递，接收方需要处理重复事件"],
+          ["本地运行", "Docker Compose 附带可模拟请求失败的接收服务"]
+        ]
+      },
+      {
+        "status": "v0.1.0 · 实验阶段",
+        "name": "MCP Trace Lab",
+        "description": "记录 MCP 客户端与 stdio 服务端之间的通信。通过命令行查看调用了哪些工具、哪些请求出错，以及响应花了多长时间。",
+        "primaryAction": "查看代码",
+        "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
+        "secondaryAction": "运行说明",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab#quick-start--快速开始",
+        "details": [
+          ["技术栈", "TypeScript、Node.js"],
+          ["输出", "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"],
+          ["支持范围", "目前仅支持 stdio，可按字段名配置脱敏"]
+        ]
+      },
+      {
+        "status": "模板",
+        "name": "个人网页模板",
+        "description": "可以用这套页面做自己的个人网站。教程从复制仓库开始，介绍如何修改资料和发布到 GitHub Pages。",
+        "primaryAction": "获取模板",
+        "primaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io",
+        "secondaryAction": "使用教程",
+        "secondaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io#从这里开始",
+        "details": [
+          ["修改内容", "名字、介绍、经历和项目集中在一个 JSON 文件"],
+          ["发布方式", "GitHub Pages"],
+          ["已包含", "中英文、深浅主题和手机布局"]
+        ]
+      }
+    ]
+  }
+}

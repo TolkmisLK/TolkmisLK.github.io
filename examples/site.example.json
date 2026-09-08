@@ -1,0 +1,27 @@
+{
+  "identity": {
+    "name": "Your name",
+    "githubUsername": "your-github-name",
+    "repositoryName": "your-github-name.github.io",
+    "siteUrl": "https://your-github-name.github.io",
+    "defaultLocale": "zh",
+    "favicon": "",
+    "socialImage": ""
+  },
+  "en": {
+    "role": "Student / Developer",
+    "subtitle": "Learning and building",
+    "intro": "Hello! This is my personal website.",
+    "experienceCopy": "Write a few sentences about what you are learning or working on.",
+    "focus": [["Learning", ["HTML", "CSS", "JavaScript"]]],
+    "projects": []
+  },
+  "zh": {
+    "role": "学生 / 开发者",
+    "subtitle": "学习记录与个人项目",
+    "intro": "你好，欢迎来到我的个人网站。",
+    "experienceCopy": "在这里介绍你正在学习的内容，或者做过的事情。",
+    "focus": [["正在学习", ["HTML", "CSS", "JavaScript"]]],
+    "projects": []
+  }
+}
