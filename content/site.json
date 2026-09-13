@@ -14,9 +14,33 @@
     "intro": "I work on web and mobile apps, backend services, and tools for AI agents.",
     "experienceCopy": "I've worked on Flutter and Vue applications, enterprise management and auction systems, and healthcare IoT integrations for hospitals.",
     "focus": [
-      ["Frontend", ["TypeScript", "React", "Vue", "Flutter"]],
-      ["Backend", ["Node.js", "Python", "Java", "Spring"]],
-      ["AI tools", ["AI Agents", "MCP", "Tool Calling", "LLM Integration"]]
+      [
+        "Frontend",
+        [
+          "TypeScript",
+          "React",
+          "Vue",
+          "Flutter"
+        ]
+      ],
+      [
+        "Backend",
+        [
+          "Node.js",
+          "Python",
+          "Java",
+          "Spring"
+        ]
+      ],
+      [
+        "AI tools",
+        [
+          "AI Agents",
+          "MCP",
+          "Tool Calling",
+          "LLM Integration"
+        ]
+      ]
     ],
     "projects": [
       {
@@ -28,7 +52,10 @@
         "secondaryAction": "Try the demo",
         "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/demo.md",
         "details": [
-          ["Built with", "Java, Spring Boot, PostgreSQL, and React"],
+          [
+            "Built with",
+            "Java, Spring Boot, PostgreSQL, and React"
+          ],
           [
             "Delivery",
             "At-least-once: receivers need to handle duplicate events"
@@ -48,9 +75,41 @@
         "secondaryAction": "Try the demo",
         "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
         "details": [
-          ["Built with", "TypeScript and Node.js"],
-          ["Output", "Local JSONL traces with text or JSON summaries"],
-          ["Scope", "stdio only; sensitive fields can be redacted by key name"]
+          [
+            "Built with",
+            "TypeScript and Node.js"
+          ],
+          [
+            "Output",
+            "Local JSONL traces with text or JSON summaries"
+          ],
+          [
+            "Scope",
+            "stdio only; sensitive fields can be redacted by key name"
+          ]
+        ]
+      },
+      {
+        "status": "Development preview",
+        "name": "ADB Device Desk",
+        "description": "Connect Android devices from a Windows desktop app, diagnose ADB issues, and export screenshots or logs.",
+        "primaryAction": "Source code",
+        "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
+        "secondaryAction": "Setup guide",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk#readme",
+        "details": [
+          [
+            "Built with",
+            "Flutter and Dart"
+          ],
+          [
+            "Platform",
+            "Windows x64"
+          ],
+          [
+            "Status",
+            "Windows build passed; physical-device acceptance pending"
+          ]
         ]
       },
       {
@@ -66,7 +125,10 @@
             "Editing",
             "Name, introduction, experience and projects in one JSON file"
           ],
-          ["Publishing", "GitHub Pages"],
+          [
+            "Publishing",
+            "GitHub Pages"
+          ],
           [
             "Included",
             "English and Chinese, light and dark themes, mobile layout"
@@ -81,9 +143,33 @@
     "intro": "我做 Web 和移动端应用，也写后端服务。目前主要关注 AI Agent 和 MCP 相关工具。",
     "experienceCopy": "做过 Flutter 和 Vue 应用、企业管理与拍卖系统，以及医院设备相关的软件集成。",
     "focus": [
-      ["前端", ["TypeScript", "React", "Vue", "Flutter"]],
-      ["后端", ["Node.js", "Python", "Java", "Spring"]],
-      ["AI 工具", ["AI Agents", "MCP", "Tool Calling", "LLM Integration"]]
+      [
+        "前端",
+        [
+          "TypeScript",
+          "React",
+          "Vue",
+          "Flutter"
+        ]
+      ],
+      [
+        "后端",
+        [
+          "Node.js",
+          "Python",
+          "Java",
+          "Spring"
+        ]
+      ],
+      [
+        "AI 工具",
+        [
+          "AI Agents",
+          "MCP",
+          "Tool Calling",
+          "LLM Integration"
+        ]
+      ]
     ],
     "projects": [
       {
@@ -95,9 +181,18 @@
         "secondaryAction": "运行演示",
         "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/demo.md",
         "details": [
-          ["技术栈", "Java、Spring Boot、PostgreSQL、React"],
-          ["投递方式", "至少一次投递，接收方需要处理重复事件"],
-          ["本地运行", "Docker Compose 附带可模拟请求失败的接收服务"]
+          [
+            "技术栈",
+            "Java、Spring Boot、PostgreSQL、React"
+          ],
+          [
+            "投递方式",
+            "至少一次投递，接收方需要处理重复事件"
+          ],
+          [
+            "本地运行",
+            "Docker Compose 附带可模拟请求失败的接收服务"
+          ]
         ]
       },
       {
@@ -109,9 +204,41 @@
         "secondaryAction": "运行演示",
         "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
         "details": [
-          ["技术栈", "TypeScript、Node.js"],
-          ["输出", "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"],
-          ["支持范围", "目前仅支持 stdio，可按字段名配置脱敏"]
+          [
+            "技术栈",
+            "TypeScript、Node.js"
+          ],
+          [
+            "输出",
+            "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"
+          ],
+          [
+            "支持范围",
+            "目前仅支持 stdio，可按字段名配置脱敏"
+          ]
+        ]
+      },
+      {
+        "status": "开发预览",
+        "name": "ADB Device Desk",
+        "description": "在 Windows 桌面应用中连接安卓设备、排查 ADB 问题，并保存截图或日志。",
+        "primaryAction": "查看代码",
+        "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
+        "secondaryAction": "使用说明",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk#readme",
+        "details": [
+          [
+            "技术栈",
+            "Flutter、Dart"
+          ],
+          [
+            "平台",
+            "Windows x64"
+          ],
+          [
+            "进度",
+            "Windows 构建已通过，真机验收待完成"
+          ]
         ]
       },
       {
@@ -123,9 +250,18 @@
         "secondaryAction": "截图教程",
         "secondaryHref": "https://github.com/TolkmisLK/TolkmisLK.github.io/blob/main/docs/walkthrough.md",
         "details": [
-          ["修改内容", "名字、介绍、经历和项目集中在一个 JSON 文件"],
-          ["发布方式", "GitHub Pages"],
-          ["已包含", "中英文、深浅主题和手机布局"]
+          [
+            "修改内容",
+            "名字、介绍、经历和项目集中在一个 JSON 文件"
+          ],
+          [
+            "发布方式",
+            "GitHub Pages"
+          ],
+          [
+            "已包含",
+            "中英文、深浅主题和手机布局"
+          ]
         ]
       }
     ]
