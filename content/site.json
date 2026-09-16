@@ -113,6 +113,34 @@
         ]
       },
       {
+        "status": "Development preview",
+        "name": "Mutual Chat",
+        "description": "Encrypted Matrix messaging as a standalone app or an embeddable panel, with session recovery and local message search.",
+        "primaryAction": "Source code",
+        "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
+        "secondaryAction": "Embedding guide",
+        "secondaryHref": "https://github.com/TolkmisLK/mutual_chat/blob/main/docs/EMBEDDING.md",
+        "details": [
+          ["Built with", "Matrix SDK, JavaScript and Electron"],
+          ["Forms", "Web app, embeddable panel and Windows desktop preview"],
+          ["Status", "Encrypted messaging tested; device verification and mobile acceptance pending"]
+        ]
+      },
+      {
+        "status": "Development preview",
+        "name": "Mutual Transfer",
+        "description": "Move files through a shared LAN workspace, resume interrupted uploads, check file hashes, and manage paired devices.",
+        "primaryAction": "Source code",
+        "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
+        "secondaryAction": "HTTPS setup",
+        "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/HTTPS.md",
+        "details": [
+          ["Built with", "Node.js and a responsive browser client"],
+          ["Sharing", "Server-mediated; all workspace members can read and delete files"],
+          ["Status", "Large-file and recovery tests passed; physical LAN acceptance pending"]
+        ]
+      },
+      {
         "status": "Template",
         "name": "Personal website template",
         "description": "Use this site as a starting point for your own page. The guide covers copying the repository, editing your profile, and publishing with GitHub Pages.",
@@ -239,6 +267,34 @@
             "进度",
             "Windows 构建已通过，真机验收待完成"
           ]
+        ]
+      },
+      {
+        "status": "开发预览",
+        "name": "Mutual Chat",
+        "description": "基于 Matrix 的加密聊天，可独立运行，也可嵌入其他应用，支持会话恢复和本地消息搜索。",
+        "primaryAction": "查看代码",
+        "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
+        "secondaryAction": "嵌入说明",
+        "secondaryHref": "https://github.com/TolkmisLK/mutual_chat/blob/main/docs/EMBEDDING.md",
+        "details": [
+          ["技术栈", "Matrix SDK、JavaScript、Electron"],
+          ["使用形式", "网页应用、嵌入式面板和 Windows 桌面预览版"],
+          ["进度", "加密通信已测试，设备验证和移动端验收待完成"]
+        ]
+      },
+      {
+        "status": "开发预览",
+        "name": "Mutual Transfer",
+        "description": "通过局域网共享空间传文件，支持断点续传、文件校验和配对设备管理。",
+        "primaryAction": "查看代码",
+        "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
+        "secondaryAction": "HTTPS 配置",
+        "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/HTTPS.md",
+        "details": [
+          ["技术栈", "Node.js、响应式浏览器客户端"],
+          ["共享方式", "由服务端中转，空间成员都可读取和删除文件"],
+          ["进度", "大文件和恢复测试已通过，局域网真机验收待完成"]
         ]
       },
       {
