@@ -67,9 +67,9 @@
         ]
       },
       {
-        "status": "Unpublished preview",
+        "status": "Windows preview · v0.1.0-preview.2",
         "name": "ADB Device Desk",
-        "description": "Connect Android devices from a Windows desktop app, diagnose ADB issues, and export screenshots or logs.",
+        "description": "Connect Android devices from a Windows desktop app, capture screens, export logs, and install an APK across selected devices.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "Setup guide",
@@ -84,8 +84,8 @@
             "Windows x64"
           ],
           [
-            "Status",
-            "Windows CI build and startup passed; clean-machine and device acceptance pending"
+            "Getting started",
+            "Install Android Platform Tools, then connect an authorized device"
           ]
         ]
       },
@@ -115,7 +115,7 @@
       {
         "status": "Development preview",
         "name": "Mutual Chat",
-        "description": "A Matrix messaging preview as a standalone app or embeddable panel, with session recovery and local search. Contact identity verification and first backup remain unfinished.",
+        "description": "A Matrix client for text conversations, session recovery and local search. Run it as a standalone app or embed it in another page.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
         "secondaryAction": "Embedding guide",
@@ -123,21 +123,21 @@
         "details": [
           ["Built with", "Matrix SDK, JavaScript and Electron"],
           ["Forms", "Web app, embeddable panel and Windows desktop preview"],
-          ["Status", "Messaging tests passed; contact identity verification, first backup and mobile acceptance pending"]
+          ["Scope", "Requires a Matrix account; contact identity verification and first backup are not yet supported"]
         ]
       },
       {
         "status": "Development preview",
         "name": "Mutual Transfer",
-        "description": "Move files through a shared LAN workspace, resume interrupted uploads, check file hashes, and manage paired devices. An intermittent Android issue remains under investigation.",
+        "description": "Share files between computers and phones through a LAN workspace. Resume interrupted uploads, check file hashes, and manage paired devices.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
-        "secondaryAction": "HTTPS setup",
-        "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/HTTPS.md",
+        "secondaryAction": "Illustrated guide",
+        "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/QUICKSTART.md",
         "details": [
           ["Built with", "Node.js and a responsive browser client"],
           ["Sharing", "Server-mediated; all workspace members can read and delete files"],
-          ["Status", "Large-file and recovery tests passed; physical LAN acceptance pending; intermittent Android issue unresolved"]
+          ["Getting started", "Run the service on your computer; trusted HTTPS is required for other devices"]
         ]
       },
       {
@@ -224,9 +224,9 @@
         ]
       },
       {
-        "status": "未公开的开发预览",
+        "status": "Windows 预览版 · v0.1.0-preview.2",
         "name": "ADB Device Desk",
-        "description": "在 Windows 桌面应用中连接安卓设备、排查 ADB 问题，并保存截图或日志。",
+        "description": "在 Windows 桌面应用中连接安卓设备、截取屏幕、导出日志，也可以给选中的多台设备批量安装 APK。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "使用说明",
@@ -241,8 +241,8 @@
             "Windows x64"
           ],
           [
-            "进度",
-            "Windows CI 构建与启动已通过，普通电脑及真机验收待完成"
+            "开始使用",
+            "准备 Android Platform Tools，连接已授权的设备"
           ]
         ]
       },
@@ -272,7 +272,7 @@
       {
         "status": "开发预览",
         "name": "Mutual Chat",
-        "description": "基于 Matrix 的聊天预览，可独立运行或嵌入其他应用，支持会话恢复与本地搜索。联系人身份验证和首次备份尚未完成。",
+        "description": "基于 Matrix 的文字聊天客户端，支持会话恢复与本地搜索。可以独立运行，也可以作为面板嵌入其他页面。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
         "secondaryAction": "嵌入说明",
@@ -280,21 +280,21 @@
         "details": [
           ["技术栈", "Matrix SDK、JavaScript、Electron"],
           ["使用形式", "网页应用、嵌入式面板和 Windows 桌面预览版"],
-          ["进度", "通信测试已通过；联系人身份验证、首次备份和移动端验收待完成"]
+          ["使用范围", "需要 Matrix 账号；暂不支持联系人身份验证和首次备份"]
         ]
       },
       {
         "status": "开发预览",
         "name": "Mutual Transfer",
-        "description": "通过局域网共享空间传文件，支持断点续传、文件校验和配对设备管理。间歇性的 Android 故障仍在排查。",
+        "description": "让电脑和手机通过局域网共享文件，支持上传断点续传、文件校验和配对设备管理。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
-        "secondaryAction": "HTTPS 配置",
-        "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/HTTPS.md",
+        "secondaryAction": "截图教程",
+        "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/QUICKSTART.md",
         "details": [
           ["技术栈", "Node.js、响应式浏览器客户端"],
           ["共享方式", "由服务端中转，空间成员都可读取和删除文件"],
-          ["进度", "大文件和恢复测试已通过；局域网真机验收待完成，间歇性 Android 故障未解决"]
+          ["开始使用", "在电脑上启动服务，跨设备访问需配置受信任的 HTTPS"]
         ]
       },
       {

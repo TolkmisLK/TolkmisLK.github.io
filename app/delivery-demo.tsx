@@ -17,13 +17,13 @@ function localTimeOfDay(): TimeOfDay {
 const greetings = {
   en: {
     morning: ["Good morning. A fresh start awaits.", "Morning light looks lovely today.", "Hope your morning is off to a gentle start."],
-    day: ["Hope your day is going well.", "A little hello for your afternoon.", "May the rest of your day go smoothly."],
+    day: ["Hope your day is going well.", "A little hello in the middle of a busy day.", "May the rest of your day go smoothly."],
     evening: ["Good evening. Time to take a breath.", "The evening light is here. Hello!", "Hope your evening feels easy."],
     night: ["Good night. Take care out there.", "A quiet hello for the night.", "Hope you find a moment to rest."],
   },
   zh: {
     morning: ["早上好，愿今天有个好开头。", "晨光正好，送你一声问候。", "愿你的早晨轻松又顺利。"],
-    day: ["白天好，愿你今天一切顺利。", "送来一声午间问候。", "愿接下来的时光都顺心。"],
+    day: ["你好呀，愿你今天一切顺利。", "忙碌之间，送你一声问候。", "愿接下来的时光都顺心。"],
     evening: ["傍晚好，忙完记得歇一歇。", "晚霞来了，向你问声好。", "愿你今晚轻松愉快。"],
     night: ["夜深了，愿你有个好梦。", "给夜晚送来一声轻轻的问候。", "愿你今晚能好好休息。"],
   },
