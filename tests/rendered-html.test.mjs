@@ -67,3 +67,24 @@ test("renders language, theme, and optional image settings", () => {
   );
   assert.equal(html.includes('rel="icon"'), Boolean(config.identity.favicon));
 });
+
+test("renders the project interaction controls without development notes", () => {
+  const projectPaths = profile.projects.map((project) => new URL(project.primaryHref).pathname);
+  const demos = [
+    ["/TolkmisLK/adb-device-desk", "adb-device", "Connect"],
+    ["/TolkmisLK/mcp-trace-lab", "mcp-route", "Run request"],
+    ["/TolkmisLK/Mutual_transfer", "transfer-track", "Start transfer"],
+    ["/TolkmisLK/mutual_chat", "chat-form", "Write a short note"],
+  ];
+  for (const [path, className, control] of demos) {
+    if (!projectPaths.includes(path)) continue;
+    assert.ok(html.includes(className), `${path} interaction is missing`);
+    if (locale === "en") assert.ok(html.includes(control), `${path} control is missing`);
+  }
+  assert.ok(!html.includes("Illustrated simulation · stays in your browser"));
+  assert.ok(!html.includes("This simplified sequence illustrates retries"));
+  if (projectPaths.includes("/TolkmisLK/webhook-delivery-platform")) {
+    assert.ok(!html.includes("hello.json"));
+    assert.ok(html.includes(locale === "zh" ? "一张小纸条" : "A little note"));
+  }
+});

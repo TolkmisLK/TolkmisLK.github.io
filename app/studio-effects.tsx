@@ -47,7 +47,7 @@ export function StudioEffects({ enabled }: { enabled: boolean }) {
     function onClick(event: MouseEvent) {
       const target = event.target;
       if (!(target instanceof HTMLElement) || event.detail === 0 || event.button !== 0) return;
-      if (target.closest("a, button, input, label, select, textarea, .studio-scene, .delivery-demo")) return;
+      if (target.closest("a, button, input, label, select, textarea, .studio-scene, .delivery-demo, .project-demo")) return;
       if (!target.matches("main, section, .hero, .work-list, .site-shell, [data-portfolio-root]")) return;
       if (sparks.size >= 12) return;
       const spark = document.createElement("span");

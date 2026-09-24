@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { site, defaultLocale, githubUrl, repositoryUrl } from "../lib/site";
 import { StudioScene } from "./studio-scene";
 import { DeliveryDemo } from "./delivery-demo";
+import { AdbDemo, McpDemo, TransferDemo, ChatDemo } from "./project-demos";
 import { StudioEffects, useMotionEnvironment } from "./studio-effects";
 import "./studio.css";
 
@@ -286,6 +287,18 @@ export function Portfolio() {
                   )}
                   {new URL(project.primaryHref).pathname.replace(/\/$/, "") === "/TolkmisLK/webhook-delivery-platform" && (
                     <DeliveryDemo locale={locale} motionEnabled={motionEnabled} />
+                  )}
+                  {new URL(project.primaryHref).pathname.replace(/\/$/, "") === "/TolkmisLK/adb-device-desk" && (
+                    <AdbDemo locale={locale} motionEnabled={motionEnabled} />
+                  )}
+                  {new URL(project.primaryHref).pathname.replace(/\/$/, "") === "/TolkmisLK/mcp-trace-lab" && (
+                    <McpDemo locale={locale} motionEnabled={motionEnabled} />
+                  )}
+                  {new URL(project.primaryHref).pathname.replace(/\/$/, "") === "/TolkmisLK/Mutual_transfer" && (
+                    <TransferDemo locale={locale} motionEnabled={motionEnabled} />
+                  )}
+                  {new URL(project.primaryHref).pathname.replace(/\/$/, "") === "/TolkmisLK/mutual_chat" && (
+                    <ChatDemo locale={locale} motionEnabled={motionEnabled} />
                   )}
                 </article>
               ))}
