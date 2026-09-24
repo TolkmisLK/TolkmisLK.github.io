@@ -9,10 +9,10 @@
     "socialImage": "/og.png"
   },
   "en": {
-    "role": "Software engineer · 6 years of experience",
-    "subtitle": "Full-stack development & AI agents",
-    "intro": "I work on web and mobile apps, backend services, and tools for AI agents.",
-    "experienceCopy": "I've worked on Flutter and Vue applications, enterprise management and auction systems, and healthcare IoT integrations for hospitals.",
+    "role": "Software developer",
+    "subtitle": "Tools for delivery, devices and MCP debugging",
+    "intro": "I build tools that retry webhook deliveries, help inspect Android devices, and trace MCP calls. Start with the three projects below.",
+    "experienceCopy": "My projects span web consoles, backend services, Windows desktop apps and command-line tools. Each project links to its setup steps and current limits.",
     "focus": [
       [
         "Frontend",
@@ -44,12 +44,12 @@
     ],
     "projects": [
       {
-        "status": "v1.0.0",
+        "status": "Public release · v1.0.0",
         "name": "Webhook Delivery Platform",
         "description": "Sends events to HTTP endpoints and retries failed requests. The web console lets you manage endpoints, inspect each delivery attempt, and replay jobs.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
-        "secondaryAction": "Try the demo",
+        "secondaryAction": "Local walkthrough",
         "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/demo.md",
         "details": [
           [
@@ -67,30 +67,7 @@
         ]
       },
       {
-        "status": "v0.1.0 · Experimental",
-        "name": "MCP Trace Lab",
-        "description": "Records traffic between an MCP client and a stdio server. Use the command-line summary to check which tools were called, what failed, and how long responses took.",
-        "primaryAction": "Source code",
-        "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
-        "secondaryAction": "Try the demo",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
-        "details": [
-          [
-            "Built with",
-            "TypeScript and Node.js"
-          ],
-          [
-            "Output",
-            "Local JSONL traces with text or JSON summaries"
-          ],
-          [
-            "Scope",
-            "stdio only; sensitive fields can be redacted by key name"
-          ]
-        ]
-      },
-      {
-        "status": "Development preview",
+        "status": "Unpublished preview",
         "name": "ADB Device Desk",
         "description": "Connect Android devices from a Windows desktop app, diagnose ADB issues, and export screenshots or logs.",
         "primaryAction": "Source code",
@@ -108,14 +85,37 @@
           ],
           [
             "Status",
-            "Windows build passed; physical-device acceptance pending"
+            "Windows CI build and startup passed; clean-machine and device acceptance pending"
+          ]
+        ]
+      },
+      {
+        "status": "Experimental source · v0.1.0",
+        "name": "MCP Trace Lab",
+        "description": "Records traffic between an MCP client and a stdio server. Use the command-line summary to check which tools were called, what failed, and how long responses took.",
+        "primaryAction": "Source code",
+        "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
+        "secondaryAction": "Local example",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
+        "details": [
+          [
+            "Built with",
+            "TypeScript and Node.js"
+          ],
+          [
+            "Output",
+            "Local JSONL traces with text or JSON summaries"
+          ],
+          [
+            "Scope",
+            "stdio only; review traces for sensitive content before sharing"
           ]
         ]
       },
       {
         "status": "Development preview",
         "name": "Mutual Chat",
-        "description": "Encrypted Matrix messaging as a standalone app or an embeddable panel, with session recovery and local message search.",
+        "description": "A Matrix messaging preview as a standalone app or embeddable panel, with session recovery and local search. Contact identity verification and first backup remain unfinished.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
         "secondaryAction": "Embedding guide",
@@ -123,13 +123,13 @@
         "details": [
           ["Built with", "Matrix SDK, JavaScript and Electron"],
           ["Forms", "Web app, embeddable panel and Windows desktop preview"],
-          ["Status", "Encrypted messaging tested; device verification and mobile acceptance pending"]
+          ["Status", "Messaging tests passed; contact identity verification, first backup and mobile acceptance pending"]
         ]
       },
       {
         "status": "Development preview",
         "name": "Mutual Transfer",
-        "description": "Move files through a shared LAN workspace, resume interrupted uploads, check file hashes, and manage paired devices.",
+        "description": "Move files through a shared LAN workspace, resume interrupted uploads, check file hashes, and manage paired devices. An intermittent Android issue remains under investigation.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
         "secondaryAction": "HTTPS setup",
@@ -137,7 +137,7 @@
         "details": [
           ["Built with", "Node.js and a responsive browser client"],
           ["Sharing", "Server-mediated; all workspace members can read and delete files"],
-          ["Status", "Large-file and recovery tests passed; physical LAN acceptance pending"]
+          ["Status", "Large-file and recovery tests passed; physical LAN acceptance pending; intermittent Android issue unresolved"]
         ]
       },
       {
@@ -166,10 +166,10 @@
     ]
   },
   "zh": {
-    "role": "软件开发工程师 · 6 年开发经验",
-    "subtitle": "全栈开发与 AI Agent",
-    "intro": "我做 Web 和移动端应用，也写后端服务。目前主要关注 AI Agent 和 MCP 相关工具。",
-    "experienceCopy": "做过 Flutter 和 Vue 应用、企业管理与拍卖系统，以及医院设备相关的软件集成。",
+    "role": "软件开发者",
+    "subtitle": "事件投递、设备工具与 MCP 排障",
+    "intro": "我做 Webhook 可靠投递、安卓设备管理和 MCP 调用排障工具。可以从下面三个项目看起。",
+    "experienceCopy": "这些项目涉及网页控制台、后端服务、Windows 桌面应用和命令行工具。各项目都附有使用方法与当前限制。",
     "focus": [
       [
         "前端",
@@ -201,12 +201,12 @@
     ],
     "projects": [
       {
-        "status": "v1.0.0",
+        "status": "公开版本 · v1.0.0",
         "name": "可靠 Webhook 推送平台",
         "description": "将事件推送到 HTTP 接口，失败后自动重试。可以在网页控制台管理接收地址、查看每次请求的结果，并手动重新推送。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
-        "secondaryAction": "运行演示",
+        "secondaryAction": "本地演示步骤",
         "secondaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/demo.md",
         "details": [
           [
@@ -224,30 +224,7 @@
         ]
       },
       {
-        "status": "v0.1.0 · 实验阶段",
-        "name": "MCP Trace Lab",
-        "description": "记录 MCP 客户端与 stdio 服务端之间的通信。通过命令行查看调用了哪些工具、哪些请求出错，以及响应花了多长时间。",
-        "primaryAction": "查看代码",
-        "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
-        "secondaryAction": "运行演示",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
-        "details": [
-          [
-            "技术栈",
-            "TypeScript、Node.js"
-          ],
-          [
-            "输出",
-            "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"
-          ],
-          [
-            "支持范围",
-            "目前仅支持 stdio，可按字段名配置脱敏"
-          ]
-        ]
-      },
-      {
-        "status": "开发预览",
+        "status": "未公开的开发预览",
         "name": "ADB Device Desk",
         "description": "在 Windows 桌面应用中连接安卓设备、排查 ADB 问题，并保存截图或日志。",
         "primaryAction": "查看代码",
@@ -265,14 +242,37 @@
           ],
           [
             "进度",
-            "Windows 构建已通过，真机验收待完成"
+            "Windows CI 构建与启动已通过，普通电脑及真机验收待完成"
+          ]
+        ]
+      },
+      {
+        "status": "实验阶段源码 · v0.1.0",
+        "name": "MCP Trace Lab",
+        "description": "记录 MCP 客户端与 stdio 服务端之间的通信。通过命令行查看调用了哪些工具、哪些请求出错，以及响应花了多长时间。",
+        "primaryAction": "查看代码",
+        "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
+        "secondaryAction": "本地示例",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
+        "details": [
+          [
+            "技术栈",
+            "TypeScript、Node.js"
+          ],
+          [
+            "输出",
+            "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"
+          ],
+          [
+            "支持范围",
+            "目前仅支持 stdio；分享追踪文件前需检查敏感内容"
           ]
         ]
       },
       {
         "status": "开发预览",
         "name": "Mutual Chat",
-        "description": "基于 Matrix 的加密聊天，可独立运行，也可嵌入其他应用，支持会话恢复和本地消息搜索。",
+        "description": "基于 Matrix 的聊天预览，可独立运行或嵌入其他应用，支持会话恢复与本地搜索。联系人身份验证和首次备份尚未完成。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
         "secondaryAction": "嵌入说明",
@@ -280,13 +280,13 @@
         "details": [
           ["技术栈", "Matrix SDK、JavaScript、Electron"],
           ["使用形式", "网页应用、嵌入式面板和 Windows 桌面预览版"],
-          ["进度", "加密通信已测试，设备验证和移动端验收待完成"]
+          ["进度", "通信测试已通过；联系人身份验证、首次备份和移动端验收待完成"]
         ]
       },
       {
         "status": "开发预览",
         "name": "Mutual Transfer",
-        "description": "通过局域网共享空间传文件，支持断点续传、文件校验和配对设备管理。",
+        "description": "通过局域网共享空间传文件，支持断点续传、文件校验和配对设备管理。间歇性的 Android 故障仍在排查。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
         "secondaryAction": "HTTPS 配置",
@@ -294,7 +294,7 @@
         "details": [
           ["技术栈", "Node.js、响应式浏览器客户端"],
           ["共享方式", "由服务端中转，空间成员都可读取和删除文件"],
-          ["进度", "大文件和恢复测试已通过，局域网真机验收待完成"]
+          ["进度", "大文件和恢复测试已通过；局域网真机验收待完成，间歇性 Android 故障未解决"]
         ]
       },
       {
