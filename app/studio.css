@@ -157,6 +157,7 @@ button.primary-link { font-family: inherit; border: 0; cursor: pointer; }
 html[data-motion="on"] .project-demo[data-animate="true"] .chat-note-flight { animation: chat-note-arrive .7s ease-in both; }
 @keyframes chat-note-arrive { from { transform: translate(0, 16px) rotate(5deg); opacity: .8; } to { transform: translate(-35px, -20px) rotate(-2deg); opacity: 0; } }
 .chat-form { display: flex; gap: 8px; }
+.chat-form .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .chat-form input { flex: 1; min-width: 0; min-height: 40px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--foreground); font: inherit; font-size: .8rem; }
 .chat-form input:focus-visible, .project-demo button:focus-visible, .mcp-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
