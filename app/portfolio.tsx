@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { site, defaultLocale, githubUrl, repositoryUrl } from "../lib/site";
+import { StudioScene } from "./studio-scene";
+import { DeliveryDemo } from "./delivery-demo";
+import { StudioEffects, useMotionEnvironment } from "./studio-effects";
+import "./studio.css";
 
 type Locale = "en" | "zh";
 type Theme = "system" | "light" | "dark";
@@ -33,6 +37,13 @@ const labels = {
       dark: "Theme: dark",
     },
     exploreExperience: "View experience",
+    studio: "Welcome to my little studio",
+    workNote: "A few things from my workbench.",
+    goodbye: "Thanks for stopping by my studio.",
+    goodbyeNote: "Take a look around. The cat doesn't mind company.",
+    motionOn: "Motion: on",
+    motionOff: "Motion: off",
+    motionReduced: "Motion reduced by your system preference",
   },
   zh: {
     nav: [
@@ -59,6 +70,13 @@ const labels = {
       dark: "主题：深色",
     },
     exploreExperience: "查看经历",
+    studio: "欢迎来到我的小小工作室",
+    workNote: "书桌上，慢慢打磨的几个作品。",
+    goodbye: "谢谢来我的工作室坐坐。",
+    goodbyeNote: "随意逛逛，小猫很欢迎你的陪伴。",
+    motionOn: "动效：开",
+    motionOff: "动效：关",
+    motionReduced: "已遵循系统的减少动态效果设置",
   },
 } as const;
 
@@ -67,6 +85,9 @@ const themeOrder: Theme[] = ["system", "light", "dark"];
 export function Portfolio() {
   const [locale, setLocale] = useState<Locale>(defaultLocale);
   const [theme, setTheme] = useState<Theme>("system");
+  const [motionAllowed, setMotionAllowed] = useState(true);
+  const { reduced, visible } = useMotionEnvironment();
+  const motionEnabled = motionAllowed && !reduced && visible;
   const content = { ...labels[locale], ...site[locale] };
   const hasProjects = content.projects.length > 0;
 
@@ -74,6 +95,7 @@ export function Portfolio() {
     const syncSavedPreferences = () => {
       const savedLocale = readPreference("ncc-locale");
       const savedTheme = readPreference("ncc-theme");
+      setMotionAllowed(readPreference("ncc-motion") !== "off");
 
       if (savedLocale === "en" || savedLocale === "zh") {
         setLocale(savedLocale);
@@ -112,8 +134,22 @@ export function Portfolio() {
     savePreference("ncc-theme", nextTheme);
   }
 
+  function toggleLamp() {
+    const dark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const nextTheme = dark ? "light" : "dark";
+    setTheme(nextTheme);
+    applyTheme(nextTheme);
+    savePreference("ncc-theme", nextTheme);
+  }
+
+  function toggleMotion() {
+    setMotionAllowed(!motionAllowed);
+    savePreference("ncc-motion", motionAllowed ? "off" : "on");
+  }
+
   return (
     <div data-portfolio-root>
+      <StudioEffects enabled={motionEnabled} />
       <a className="skip-link" href="#top">
         {content.skipLink}
       </a>
@@ -121,6 +157,7 @@ export function Portfolio() {
         <div className="site-shell header-inner">
           <a className="brand" href="#top" aria-label={site.identity.name}>
             {site.identity.name}
+            <span className="brand-studio" aria-hidden="true"> / studio</span>
           </a>
           <nav
             className="nav"
@@ -135,6 +172,17 @@ export function Portfolio() {
               ))}
           </nav>
           <div className="header-actions">
+            <button
+              className="control-button motion-button"
+              type="button"
+              onClick={toggleMotion}
+              aria-pressed={motionAllowed && !reduced}
+              disabled={reduced}
+              title={reduced ? content.motionReduced : undefined}
+              aria-label={reduced ? content.motionReduced : undefined}
+            >
+              {motionAllowed && !reduced ? content.motionOn : content.motionOff}
+            </button>
             <button
               className="control-button"
               type="button"
@@ -160,7 +208,8 @@ export function Portfolio() {
 
       <main id="top" className="site-shell" tabIndex={-1}>
         <section className="hero" aria-labelledby="hero-title">
-          <div>
+          <div className="hero-content">
+            <p className="studio-welcome">{content.studio}</p>
             <p className="eyebrow">{content.role}</p>
             <h1 id="hero-title">
               {site.identity.name}
@@ -184,12 +233,14 @@ export function Portfolio() {
               </a>
             </div>
           </div>
+          <StudioScene locale={locale} motionEnabled={motionEnabled} onToggleLamp={toggleLamp} />
         </section>
 
         {hasProjects && (
           <section id="work" className="section" aria-labelledby="work-title">
             <div className="section-heading">
-              <h2 id="work-title">{content.workTitle}</h2>
+              <div><p className="section-number">01 / WORKBENCH</p><h2 id="work-title">{content.workTitle}</h2></div>
+              <p className="section-note">{content.workNote}</p>
             </div>
             <div className="work-list">
               {content.projects.map((project) => (
@@ -234,6 +285,9 @@ export function Portfolio() {
                       ))}
                     </dl>
                   )}
+                  {new URL(project.primaryHref).pathname.replace(/\/$/, "") === "/TolkmisLK/webhook-delivery-platform" && (
+                    <DeliveryDemo locale={locale} motionEnabled={motionEnabled} />
+                  )}
                 </article>
               ))}
             </div>
@@ -245,13 +299,13 @@ export function Portfolio() {
           className="section experience-section"
           aria-labelledby="experience-title"
         >
-          <h2 id="experience-title">{content.experienceTitle}</h2>
+          <div><p className="section-number">02 / NOTES</p><h2 id="experience-title">{content.experienceTitle}</h2></div>
           <p>{content.experienceCopy}</p>
         </section>
 
         <section id="focus" className="section" aria-labelledby="focus-title">
           <div className="section-heading">
-            <h2 id="focus-title">{content.focusTitle}</h2>
+            <div><p className="section-number">03 / TOOLBOX</p><h2 id="focus-title">{content.focusTitle}</h2></div>
           </div>
           <div className="focus-grid">
             {content.focus.map(([title, capabilities]) => (
@@ -290,6 +344,10 @@ export function Portfolio() {
       </main>
 
       <footer className="site-footer">
+        <div className="site-shell studio-farewell">
+          <p>{content.goodbye}</p>
+          <span>{content.goodbyeNote}</span>
+        </div>
         <div className="site-shell footer-inner">
           <span>
             © {new Date().getFullYear()} {site.identity.name}

@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang={defaultLocale === "zh" ? "zh-CN" : "en"}
+      data-motion="off"
       suppressHydrationWarning
     >
       <body>{children}</body>
