@@ -6,8 +6,8 @@ import { useMotionEnvironment } from "./studio-effects";
 type Phase = "idle" | "sending" | "waiting" | "retrying" | "delivered";
 const copy = {
   en: {
-    eyebrow: "A little desk experiment",
-    title: "Give an event a little nudge.",
+    eyebrow: "An interactive example",
+    title: "Send a message. See how retries work.",
     note: "Illustrated simulation · stays in your browser",
     description: "An endpoint can have a bad moment. Try sending a message, then let the first attempt fail.",
     fail: "Let the first attempt fail",
@@ -18,10 +18,10 @@ const copy = {
     retrying: "Attempt 2 · sending the same event again…",
     success: "204 · delivered on the first attempt.", recovered: "204 · delivered on attempt 2. The same event, safely received.",
     footnote: "This simplified sequence illustrates retries, not the project's exact timings. At-least-once delivery means receivers must handle duplicate events.",
-    message: "A small hello from NCC’s studio",
+    message: "A hello from NCC",
   },
   zh: {
-    eyebrow: "桌上的小实验",
+    eyebrow: "一个互动小示例",
     title: "送一封信，看看它怎么到达。",
     note: "原理模拟 · 仅在浏览器内运行",
     description: "接收接口也会偶尔忙不过来。试着发送一条消息，再让第一次投递遇到一点小意外。",
@@ -33,7 +33,7 @@ const copy = {
     retrying: "第 2 次尝试 · 再次发送同一条事件…",
     success: "204 · 第一次投递就送达了。", recovered: "204 · 第 2 次尝试送达，仍然是同一条事件。",
     footnote: "这是简化的重试过程，时间间隔不代表项目的实际配置。至少一次投递意味着接收方需要处理重复事件。",
-    message: "来自 NCC 工作室的一声问候",
+    message: "来自 NCC 的一声问候",
   },
 } as const;
 

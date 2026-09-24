@@ -37,10 +37,10 @@ const labels = {
       dark: "Theme: dark",
     },
     exploreExperience: "View experience",
-    studio: "Welcome to my little studio",
-    workNote: "A few things from my workbench.",
-    goodbye: "Thanks for stopping by my studio.",
-    goodbyeNote: "Take a look around. The cat doesn't mind company.",
+    studio: "Welcome to my personal website",
+    workNote: "A few projects I've been working on.",
+    goodbye: "Thanks for visiting.",
+    goodbyeNote: "Explore my projects and say hello to the cat.",
     motionOn: "Motion: on",
     motionOff: "Motion: off",
     motionReduced: "Motion reduced by your system preference",
@@ -70,10 +70,10 @@ const labels = {
       dark: "主题：深色",
     },
     exploreExperience: "查看经历",
-    studio: "欢迎来到我的小小工作室",
-    workNote: "书桌上，慢慢打磨的几个作品。",
-    goodbye: "谢谢来我的工作室坐坐。",
-    goodbyeNote: "随意逛逛，小猫很欢迎你的陪伴。",
+    studio: "欢迎来到我的个人网站",
+    workNote: "这里记录了我做过的一些项目。",
+    goodbye: "感谢你的来访。",
+    goodbyeNote: "看看项目，也可以和小猫打个招呼。",
     motionOn: "动效：开",
     motionOff: "动效：关",
     motionReduced: "已遵循系统的减少动态效果设置",
@@ -157,7 +157,6 @@ export function Portfolio() {
         <div className="site-shell header-inner">
           <a className="brand" href="#top" aria-label={site.identity.name}>
             {site.identity.name}
-            <span className="brand-studio" aria-hidden="true"> / studio</span>
           </a>
           <nav
             className="nav"
@@ -239,7 +238,7 @@ export function Portfolio() {
         {hasProjects && (
           <section id="work" className="section" aria-labelledby="work-title">
             <div className="section-heading">
-              <div><p className="section-number">01 / WORKBENCH</p><h2 id="work-title">{content.workTitle}</h2></div>
+              <div><p className="section-number">01 / PROJECTS</p><h2 id="work-title">{content.workTitle}</h2></div>
               <p className="section-note">{content.workNote}</p>
             </div>
             <div className="work-list">
@@ -299,13 +298,13 @@ export function Portfolio() {
           className="section experience-section"
           aria-labelledby="experience-title"
         >
-          <div><p className="section-number">02 / NOTES</p><h2 id="experience-title">{content.experienceTitle}</h2></div>
+          <div><p className="section-number">02 / EXPERIENCE</p><h2 id="experience-title">{content.experienceTitle}</h2></div>
           <p>{content.experienceCopy}</p>
         </section>
 
         <section id="focus" className="section" aria-labelledby="focus-title">
           <div className="section-heading">
-            <div><p className="section-number">03 / TOOLBOX</p><h2 id="focus-title">{content.focusTitle}</h2></div>
+            <div><p className="section-number">03 / TECHNOLOGIES</p><h2 id="focus-title">{content.focusTitle}</h2></div>
           </div>
           <div className="focus-grid">
             {content.focus.map(([title, capabilities]) => (

@@ -15,7 +15,7 @@ const imageBasePath = new URL(site.identity.siteUrl).pathname.replace(/\/$/, "")
 
 const words = {
   en: {
-    workspace: "An illustrated workspace with a green desk lamp, an NCC computer, and a coffee cup",
+    workspace: "A desk illustration with a green lamp, an NCC computer, and a coffee cup",
     lamp: "Toggle the desk lamp and color theme",
     cat: "Say hello to the cat",
     wakeCat: "Wake the sleeping cat",
@@ -24,7 +24,7 @@ const words = {
     catResponse: "A little stretch. Hello!",
   },
   zh: {
-    workspace: "工作室插画：绿色台灯、显示 NCC 的电脑和咖啡杯",
+    workspace: "书桌插画：绿色台灯、显示 NCC 的电脑和咖啡杯",
     lamp: "点击台灯，切换灯光与页面主题",
     cat: "和小猫打招呼",
     wakeCat: "叫醒睡着的小猫",
