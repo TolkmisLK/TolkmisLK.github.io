@@ -83,4 +83,8 @@ test("renders the project interaction controls without development notes", () =>
   }
   assert.ok(!html.includes("Illustrated simulation · stays in your browser"));
   assert.ok(!html.includes("This simplified sequence illustrates retries"));
+  if (projectPaths.includes("/TolkmisLK/webhook-delivery-platform")) {
+    assert.ok(!html.includes("hello.json"));
+    assert.ok(html.includes(locale === "zh" ? "一张小纸条" : "A little note"));
+  }
 });
