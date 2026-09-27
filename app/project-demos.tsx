@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { useMotionEnvironment } from "./studio-effects";
 
 type Locale = "en" | "zh";
@@ -111,6 +111,8 @@ const chatCopy = {
 } as const;
 export function ChatDemo({ locale, motionEnabled }: DemoProps) {
   const text = chatCopy[locale];
+  const inputId = useId();
+  const composing = useRef(false);
   const { visible } = useMotionEnvironment();
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState<string | null>(null);
@@ -123,13 +125,16 @@ export function ChatDemo({ locale, motionEnabled }: DemoProps) {
   function send(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const note = draft.trim();
-    if (!note || pending !== null) return;
+    if (!note || pending !== null || composing.current) return;
     setPending(note);
     setDraft("");
   }
   return <DemoFrame title={text.title} hint={text.hint} motionEnabled={motionEnabled}>
     <div className="chat-playground"><div className="chat-window"><p>{text.conversation} <span>· {text.sample}</span></p><div className="chat-bubble chat-bubble--received">{text.hello}</div>{messages.map((message, index) => <div className="chat-bubble chat-bubble--sent" key={`${index}-${message}`}>{message}</div>)}</div>{pending !== null && <div className="chat-note-flight" aria-hidden="true">{pending}</div>}</div>
     <p className="demo-status" role="status" aria-live="polite">{pending !== null ? text.sending : messages.length ? text.arrived : text.ready}</p>
-    <form className="chat-form" onSubmit={send}><label className="sr-only" htmlFor="chat-demo-input">{text.label}</label><input id="chat-demo-input" value={draft} onChange={(event) => setDraft(event.target.value)} placeholder={text.placeholder} maxLength={120} /><button className="primary-link" type="submit" disabled={!draft.trim() || pending !== null}>{text.send}</button></form>
+    <form className="chat-form" onSubmit={send}><label className="sr-only" htmlFor={inputId}>{text.label}</label><input id={inputId} value={draft} onChange={(event) => setDraft(event.target.value)} onCompositionStart={() => { composing.current = true; }} onCompositionEnd={() => { composing.current = false; }} onKeyDown={(event) => {
+      // Enter accepts an IME candidate before it can submit the note.
+      if (event.key === "Enter" && (composing.current || event.nativeEvent.isComposing || event.nativeEvent.keyCode === 229)) event.preventDefault();
+    }} placeholder={text.placeholder} maxLength={120} /><button className="primary-link" type="submit" disabled={!draft.trim() || pending !== null}>{text.send}</button></form>
   </DemoFrame>;
 }

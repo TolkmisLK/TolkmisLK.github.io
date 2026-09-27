@@ -42,6 +42,9 @@ export default function RootLayout({
       data-motion="off"
       suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('ncc-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch{}` }} />
+      </head>
       <body>{children}</body>
     </html>
   );
