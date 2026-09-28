@@ -64,16 +64,22 @@
             "Try it",
             "Docker Compose includes a receiver that simulates failures"
           ]
+        ],
+        "resources": [
+          {
+            "label": "Recovery drill",
+            "href": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/controlled-drill.md"
+          }
         ]
       },
       {
-        "status": "Windows preview · v0.1.0-preview.3",
+        "status": "Windows preview · v0.1.0-preview.4",
         "name": "Device Companion · Android Tools",
         "description": "Connect Android devices from a Windows desktop app, capture screens, export logs, and install an APK across selected devices.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "Download preview",
-        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.3",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.4",
         "details": [
           [
             "Built with",
@@ -87,12 +93,18 @@
             "Getting started",
             "Install Android Platform Tools, then connect an authorized device"
           ]
+        ],
+        "resources": [
+          {
+            "label": "User guide",
+            "href": "https://github.com/TolkmisLK/adb-device-desk/blob/main/docs/USER-GUIDE.zh-CN.md"
+          }
         ]
       },
       {
         "status": "Experimental source · v0.1.0",
         "name": "Call Trace · MCP Diagnostics",
-        "description": "Records traffic between an MCP client and a stdio server. Use the command-line summary to check which tools were called, what failed, and how long responses took.",
+        "description": "Records traffic between an MCP client and a stdio server. Inspect tool calls, failures and response times in a command-line summary or an offline HTML report.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
         "secondaryAction": "Local example",
@@ -104,12 +116,18 @@
           ],
           [
             "Output",
-            "Local JSONL traces with text or JSON summaries"
+            "Local JSONL traces, text/JSON summaries and offline HTML reports"
           ],
           [
             "Scope",
             "stdio only; review traces for sensitive content before sharing"
           ]
+        ],
+        "resources": [
+          {
+            "label": "Offline report guide",
+            "href": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/html-report.md"
+          }
         ]
       },
       {
@@ -121,9 +139,24 @@
         "secondaryAction": "Embedding guide",
         "secondaryHref": "https://github.com/TolkmisLK/mutual_chat/blob/main/docs/EMBEDDING.md",
         "details": [
-          ["Built with", "Matrix SDK, JavaScript and Electron"],
-          ["Forms", "Web app, embeddable panel and Windows desktop preview"],
-          ["Scope", "Requires a Matrix account; contact identity verification and first backup are not yet supported"]
+          [
+            "Built with",
+            "Matrix SDK, JavaScript and Electron"
+          ],
+          [
+            "Forms",
+            "Web app, embeddable panel and Windows desktop preview"
+          ],
+          [
+            "Scope",
+            "Requires a Matrix account; contact identity verification and first backup are not yet supported"
+          ]
+        ],
+        "resources": [
+          {
+            "label": "Run the host example",
+            "href": "https://github.com/TolkmisLK/mutual_chat/blob/main/examples/embed-host/README.md"
+          }
         ]
       },
       {
@@ -135,9 +168,28 @@
         "secondaryAction": "Illustrated guide",
         "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/QUICKSTART.md",
         "details": [
-          ["Built with", "Node.js and a responsive browser client"],
-          ["Sharing", "Server-mediated; all workspace members can read and delete files"],
-          ["Getting started", "Run the service on your computer; trusted HTTPS is required for other devices"]
+          [
+            "Built with",
+            "Node.js and a responsive browser client"
+          ],
+          [
+            "Sharing",
+            "Server-mediated; all workspace members can read and delete files"
+          ],
+          [
+            "Getting started",
+            "Run the service on your computer; trusted HTTPS is required for other devices"
+          ]
+        ],
+        "resources": [
+          {
+            "label": "Android preview",
+            "href": "https://github.com/TolkmisLK/Mutual_transfer/releases/tag/android-v0.1.1-preview"
+          },
+          {
+            "label": "Computer setup",
+            "href": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/WINDOWS-PORTABLE.md"
+          }
         ]
       },
       {
@@ -221,16 +273,22 @@
             "本地运行",
             "Docker Compose 附带可模拟请求失败的接收服务"
           ]
+        ],
+        "resources": [
+          {
+            "label": "故障恢复演练",
+            "href": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/controlled-drill.md"
+          }
         ]
       },
       {
-        "status": "Windows 预览版 · v0.1.0-preview.3",
+        "status": "Windows 预览版 · v0.1.0-preview.4",
         "name": "机伴 · 安卓设备助手",
         "description": "在 Windows 桌面应用中连接安卓设备、截取屏幕、导出日志，也可以给选中的多台设备批量安装 APK。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "下载预览版",
-        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.3",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.4",
         "details": [
           [
             "技术栈",
@@ -244,12 +302,18 @@
             "开始使用",
             "准备 Android Platform Tools，连接已授权的设备"
           ]
+        ],
+        "resources": [
+          {
+            "label": "中文使用教程",
+            "href": "https://github.com/TolkmisLK/adb-device-desk/blob/main/docs/USER-GUIDE.zh-CN.md"
+          }
         ]
       },
       {
         "status": "实验阶段源码 · v0.1.0",
         "name": "循迹 · MCP 调用排障",
-        "description": "记录 MCP 客户端与 stdio 服务端之间的通信。通过命令行查看调用了哪些工具、哪些请求出错，以及响应花了多长时间。",
+        "description": "记录 MCP 客户端与 stdio 服务之间的通信。通过命令行摘要或离线 HTML 报告，查看工具调用、失败原因和响应耗时。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
         "secondaryAction": "本地示例",
@@ -261,12 +325,18 @@
           ],
           [
             "输出",
-            "本地 JSONL 记录，以及文本或 JSON 格式的分析摘要"
+            "本地 JSONL 追踪、文本/JSON 摘要与离线 HTML 报告"
           ],
           [
             "支持范围",
             "目前仅支持 stdio；分享追踪文件前需检查敏感内容"
           ]
+        ],
+        "resources": [
+          {
+            "label": "离线报告指南",
+            "href": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/html-report.md"
+          }
         ]
       },
       {
@@ -278,9 +348,24 @@
         "secondaryAction": "嵌入说明",
         "secondaryHref": "https://github.com/TolkmisLK/mutual_chat/blob/main/docs/EMBEDDING.md",
         "details": [
-          ["技术栈", "Matrix SDK、JavaScript、Electron"],
-          ["使用形式", "网页应用、嵌入式面板和 Windows 桌面预览版"],
-          ["使用范围", "需要 Matrix 账号；暂不支持联系人身份验证和首次备份"]
+          [
+            "技术栈",
+            "Matrix SDK、JavaScript、Electron"
+          ],
+          [
+            "使用形式",
+            "网页应用、嵌入式面板和 Windows 桌面预览版"
+          ],
+          [
+            "使用范围",
+            "需要 Matrix 账号；暂不支持联系人身份验证和首次备份"
+          ]
+        ],
+        "resources": [
+          {
+            "label": "启动接入示例",
+            "href": "https://github.com/TolkmisLK/mutual_chat/blob/main/examples/embed-host/README.md"
+          }
         ]
       },
       {
@@ -292,9 +377,28 @@
         "secondaryAction": "截图教程",
         "secondaryHref": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/QUICKSTART.md",
         "details": [
-          ["技术栈", "Node.js、响应式浏览器客户端"],
-          ["共享方式", "由服务端中转，空间成员都可读取和删除文件"],
-          ["开始使用", "在电脑上启动服务，跨设备访问需配置受信任的 HTTPS"]
+          [
+            "技术栈",
+            "Node.js、响应式浏览器客户端"
+          ],
+          [
+            "共享方式",
+            "由服务端中转，空间成员都可读取和删除文件"
+          ],
+          [
+            "开始使用",
+            "在电脑上启动服务，跨设备访问需配置受信任的 HTTPS"
+          ]
+        ],
+        "resources": [
+          {
+            "label": "Android 预览版",
+            "href": "https://github.com/TolkmisLK/Mutual_transfer/releases/tag/android-v0.1.1-preview"
+          },
+          {
+            "label": "电脑端使用说明",
+            "href": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/WINDOWS-PORTABLE.md"
+          }
         ]
       },
       {

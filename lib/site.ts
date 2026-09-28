@@ -8,6 +8,7 @@ type Project = {
   primaryHref: string;
   secondaryAction: string;
   secondaryHref: string;
+  resources?: { label: string; href: string }[];
   details: [string, string][];
 };
 type Profile = {

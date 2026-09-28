@@ -39,3 +39,18 @@ test("reports incomplete translations and invalid skill groups", () => {
   wrongSkills.zh.focus = [["Learning", "HTML"]];
   assert.throws(() => validateSite(wrongSkills), /zh\.focus\[0\]/);
 });
+
+test("optional resource links reject unsafe, duplicate and excessive entries", () => {
+  const config = structuredClone(example);
+  const project = { name: "Example", status: "Preview", description: "A project", primaryAction: "Source", primaryHref: "https://example.com", secondaryAction: "Guide", secondaryHref: "https://example.com/guide", details: [] };
+  config.en.projects = [project];
+  assert.doesNotThrow(() => validateSite(config));
+  project.resources = [{ label: "Download", href: "https://example.com/download" }];
+  assert.doesNotThrow(() => validateSite(config));
+  project.resources[0].href = "javascript:alert(1)";
+  assert.throws(() => validateSite(config), /resources\[0\]\.href/);
+  project.resources = Array(2).fill({ label: "Guide", href: "https://example.com/guide" });
+  assert.throws(() => validateSite(config), /duplicate resource/);
+  project.resources = Array(4).fill({ label: "Guide", href: "https://example.com/guide" });
+  assert.throws(() => validateSite(config), /up to three/);
+});
