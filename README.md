@@ -86,6 +86,7 @@ JSON 的字段名、双引号、逗号和括号需要保留。可以先只改引
   "primaryHref": "https://github.com/你的用户名/项目仓库名",
   "secondaryAction": "使用说明",
   "secondaryHref": "https://github.com/你的用户名/项目仓库名#readme",
+  "resources": [{ "label": "下载预览版", "href": "https://github.com/你的用户名/项目仓库名/releases" }],
   "details": [
     ["使用的技术", "HTML、CSS、JavaScript"],
     ["运行方法", "打开 README 查看步骤"]

@@ -78,6 +78,7 @@ To add a project, put an object like this inside the `en.projects` array, then a
   "primaryHref": "https://github.com/your-username/project-name",
   "secondaryAction": "Instructions",
   "secondaryHref": "https://github.com/your-username/project-name#readme",
+  "resources": [{ "label": "Download preview", "href": "https://github.com/your-username/project-name/releases" }],
   "details": [
     ["Built with", "HTML, CSS, JavaScript"],
     ["Run locally", "See the repository README"]

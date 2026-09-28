@@ -274,6 +274,15 @@ export function Portfolio() {
                         {project.secondaryAction} ↗
                       </a>
                     </div>
+                    {!!project.resources?.length && (
+                      <nav className="project-resources" aria-label={`${project.name} · ${locale === "zh" ? "使用入口" : "Resources"}`}>
+                        {project.resources.map((resource) => (
+                          <a key={resource.href} href={resource.href} target="_blank" rel="noreferrer">
+                            {resource.label} <span aria-hidden="true">↗</span>
+                          </a>
+                        ))}
+                      </nav>
+                    )}
                   </div>
                   {project.details.length > 0 && (
                     <dl className="project-details">

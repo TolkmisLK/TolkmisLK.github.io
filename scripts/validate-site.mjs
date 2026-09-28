@@ -110,6 +110,20 @@ export function validateSite(config) {
       names.add(project.name);
       url(project.primaryHref, `${path}.primaryHref`);
       url(project.secondaryHref, `${path}.secondaryHref`);
+      if (project.resources !== undefined) {
+        if (!Array.isArray(project.resources) || project.resources.length > 3)
+          fail(`${path}.resources`, "最多填写三个入口 / use up to three resources");
+        const resourceUrls = new Set();
+        project.resources.forEach((resource, i) => {
+          if (!resource || typeof resource !== "object")
+            fail(`${path}.resources[${i}]`, "需要入口对象 / expected a resource object");
+          text(resource.label, `${path}.resources[${i}].label`);
+          const normalized = url(resource.href, `${path}.resources[${i}].href`).href;
+          if (resourceUrls.has(normalized))
+            fail(`${path}.resources[${i}].href`, "入口不能重复 / duplicate resource");
+          resourceUrls.add(normalized);
+        });
+      }
       pairs(project.details, `${path}.details`);
     }
   }

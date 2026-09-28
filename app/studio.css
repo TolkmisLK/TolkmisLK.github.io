@@ -68,6 +68,9 @@ button.primary-link { font-family: inherit; border: 0; cursor: pointer; }
 .work-summary h3 { font-size: clamp(1.35rem, 2.5vw, 1.7rem); }
 .work-summary > p:not(.work-kicker) { font-size: .95rem; }
 .project-details { font-size: .875rem; }
+.project-resources { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 14px; }
+.project-resources a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; font-size: .85rem; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.project-resources a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
 .project-details dt { font-size: .8rem; }
 .work-kicker { font-size: .75rem; }
 .focus-card { border-left: 2px solid var(--line); padding-left: 22px; }
