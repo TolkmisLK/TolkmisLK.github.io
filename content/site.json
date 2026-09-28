@@ -73,13 +73,13 @@
         ]
       },
       {
-        "status": "Windows preview · v0.1.0-preview.3",
+        "status": "Windows preview · v0.1.0-preview.4",
         "name": "Device Companion · Android Tools",
         "description": "Connect Android devices from a Windows desktop app, capture screens, export logs, and install an APK across selected devices.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "Download preview",
-        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.3",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.4",
         "details": [
           [
             "Built with",
@@ -282,13 +282,13 @@
         ]
       },
       {
-        "status": "Windows 预览版 · v0.1.0-preview.3",
+        "status": "Windows 预览版 · v0.1.0-preview.4",
         "name": "机伴 · 安卓设备助手",
         "description": "在 Windows 桌面应用中连接安卓设备、截取屏幕、导出日志，也可以给选中的多台设备批量安装 APK。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "下载预览版",
-        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.3",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.4",
         "details": [
           [
             "技术栈",
