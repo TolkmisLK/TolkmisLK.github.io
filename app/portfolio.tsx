@@ -252,7 +252,7 @@ export function Portfolio() {
                 <a key={project.id ?? index} href={`#project-${project.id ?? index + 1}`}>
                   <span className="project-index-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                   <strong>{project.useCase ?? project.name}</strong>
-                  <span>{project.name}</span>
+                  {project.useCase && <span>{project.name}</span>}
                 </a>
               ))}
             </nav>
@@ -300,7 +300,7 @@ export function Portfolio() {
                         ))}
                       </nav>
                     )}
-                    <ProjectShare id={`project-${project.id ?? index + 1}`} locale={locale} />
+                    <ProjectShare key={locale} id={`project-${project.id ?? index + 1}`} locale={locale} />
                   </div>
                   {project.details.length > 0 && (
                     <dl className="project-details">

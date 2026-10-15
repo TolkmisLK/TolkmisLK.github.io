@@ -229,3 +229,5 @@ html[data-motion="off"] *, html[data-motion="off"] *::before, html[data-motion="
 .project-share-button { min-height:44px; padding:4px 0; border:0; background:transparent; color:var(--accent); cursor:pointer; font:inherit; }
 .project-share [role="status"] { color:var(--muted); }
 .project-share a { color:var(--accent); overflow-wrap:anywhere; }
+.project-share-url { flex:1 1 100%; min-width:0; padding:9px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--foreground); font:inherit; }
+.project-share-url:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }

@@ -134,9 +134,15 @@ export function validateSite(config) {
       pairs(project.details, `${path}.details`);
     }
   }
-  const projectIds = (locale) => config[locale].projects.map((project) => project.id ?? null);
-  if ([...projectIds("en"), ...projectIds("zh")].some((id) => id !== null) && JSON.stringify(projectIds("en")) !== JSON.stringify(projectIds("zh")))
-    fail("projects.id", "两种语言的项目标识和顺序须一致 / project ids and order must match across locales");
+  const projectKeys = (locale) =>
+    config[locale].projects.map(
+      (project) => project.id ?? new URL(project.primaryHref).href,
+    );
+  if (JSON.stringify(projectKeys("en")) !== JSON.stringify(projectKeys("zh")))
+    fail(
+      "projects",
+      "两种语言的项目数量与顺序须一致；请使用相同 id，未填写 id 时须使用相同项目网址 / project count and order must match across locales; use matching ids, or matching project URLs when ids are omitted",
+    );
 }
 
 if (

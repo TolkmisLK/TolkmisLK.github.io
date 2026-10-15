@@ -25,5 +25,13 @@ export function ProjectShare({ id, locale }: { id: string; locale: "en" | "zh" }
       {state === "copied" && (locale === "zh" ? "链接已复制" : "Link copied")}
       {state === "manual" && <a href={href}>{locale === "zh" ? "请复制此直达链接" : "Copy this direct link"}</a>}
     </span>
+    {state === "manual" && <input
+      className="project-share-url"
+      type="url"
+      readOnly
+      value={href}
+      aria-label={locale === "zh" ? "项目直达链接，可按 Ctrl+C 复制" : "Direct project link; press Ctrl+C to copy"}
+      onFocus={(event) => event.currentTarget.select()}
+    />}
   </div>;
 }

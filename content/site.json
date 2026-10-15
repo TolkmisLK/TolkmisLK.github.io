@@ -44,9 +44,9 @@
     ],
     "projects": [
       {
-        "status": "Public release · v1.0.0",
+        "status": "Source preview · v1.1.0-preview.1",
         "name": "Relay · Reliable Webhook Delivery",
-        "description": "Sends events to HTTP endpoints and retries failed requests. The web console lets you manage endpoints, inspect each delivery attempt, and replay jobs.",
+        "description": "Send events to HTTP endpoints and retry failed requests. Manage endpoints, filter delivery history by status and receiver, inspect attempts, and replay jobs.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
         "secondaryAction": "Local walkthrough",
@@ -67,6 +67,10 @@
         ],
         "resources": [
           {
+            "label": "Release downloads and notes",
+            "href": "https://github.com/TolkmisLK/webhook-delivery-platform/releases/tag/v1.1.0-preview.1"
+          },
+          {
             "label": "Recovery drill",
             "href": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/controlled-drill.md"
           }
@@ -75,13 +79,13 @@
         "useCase": "Deliver events"
       },
       {
-        "status": "Windows preview · v0.1.0-preview.4",
+        "status": "Windows preview · v0.1.0-preview.5",
         "name": "Device Companion · Android Tools",
-        "description": "Connect Android devices from a Windows desktop app, capture screens, export logs, and install an APK across selected devices.",
+        "description": "Connect Android devices on Windows, capture screens, export logs, and install an APK across devices. Stop the remaining queue and continue unattempted targets when ready.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "Download preview",
-        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.4",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.5",
         "details": [
           [
             "Built with",
@@ -106,13 +110,13 @@
         "useCase": "Manage Android devices"
       },
       {
-        "status": "CLI preview · v0.2.0-preview.1",
+        "status": "CLI preview · v0.2.0-preview.2",
         "name": "Call Trace · MCP Diagnostics",
         "description": "Records traffic between an MCP client and a stdio server. Inspect tool calls, failures and response times in a command-line summary or an offline HTML report.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
         "secondaryAction": "Download CLI package",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/releases/tag/v0.2.0-preview.1",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/releases/tag/v0.2.0-preview.2",
         "details": [
           [
             "Built with",
@@ -137,9 +141,9 @@
         "useCase": "Inspect tool calls"
       },
       {
-        "status": "Development preview",
+        "status": "Windows / Web preview · v0.1.0-preview.2",
         "name": "Let's Chat · Matrix Messaging",
-        "description": "A Matrix client for text conversations, session recovery and local search. Run it as a standalone app or embed it in another page.",
+        "description": "A Matrix client for text conversations, session recovery, failed-message retry and local search. Run it as a standalone app or embed it in another page.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
         "secondaryAction": "Embedding guide",
@@ -160,6 +164,10 @@
         ],
         "resources": [
           {
+            "label": "Download desktop and Web packages",
+            "href": "https://github.com/TolkmisLK/mutual_chat/releases/tag/v0.1.0-preview.2"
+          },
+          {
             "label": "Run the host example",
             "href": "https://github.com/TolkmisLK/mutual_chat/blob/main/examples/embed-host/README.md"
           }
@@ -168,9 +176,9 @@
         "useCase": "Embed a chat interface"
       },
       {
-        "status": "Development preview",
+        "status": "Windows preview · v0.1.0-preview.1",
         "name": "Pass Along · LAN File Transfer",
-        "description": "Share files between computers and phones through a LAN workspace. Resume interrupted uploads, check file hashes, and manage paired devices.",
+        "description": "Share files between computers and phones through a LAN workspace. Resume or cancel uploads, check file hashes, and manage paired devices.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
         "secondaryAction": "Illustrated guide",
@@ -190,6 +198,10 @@
           ]
         ],
         "resources": [
+          {
+            "label": "Download Windows service",
+            "href": "https://github.com/TolkmisLK/Mutual_transfer/releases/tag/windows-v0.1.0-preview.1"
+          },
           {
             "label": "Android preview",
             "href": "https://github.com/TolkmisLK/Mutual_transfer/releases/tag/android-v0.1.1-preview"
@@ -265,9 +277,9 @@
     ],
     "projects": [
       {
-        "status": "公开版本 · v1.0.0",
+        "status": "源码预览版 · v1.1.0-preview.1",
         "name": "信使 · Webhook 可靠投递",
-        "description": "将事件推送到 HTTP 接口，失败后自动重试。可以在网页控制台管理接收地址、查看每次请求的结果，并手动重新推送。",
+        "description": "将事件推送到 HTTP 接口，失败后自动重试。可以管理接收地址、按状态和地址筛选投递历史、查看每次请求结果并手动重新推送。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/webhook-delivery-platform",
         "secondaryAction": "本地演示步骤",
@@ -288,6 +300,10 @@
         ],
         "resources": [
           {
+            "label": "版本下载与说明",
+            "href": "https://github.com/TolkmisLK/webhook-delivery-platform/releases/tag/v1.1.0-preview.1"
+          },
+          {
             "label": "故障恢复演练",
             "href": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/controlled-drill.md"
           }
@@ -296,13 +312,13 @@
         "useCase": "发送通知"
       },
       {
-        "status": "Windows 预览版 · v0.1.0-preview.4",
+        "status": "Windows 预览版 · v0.1.0-preview.5",
         "name": "机伴 · 安卓设备助手",
-        "description": "在 Windows 桌面应用中连接安卓设备、截取屏幕、导出日志，也可以给选中的多台设备批量安装 APK。",
+        "description": "在 Windows 桌面应用中连接安卓设备、截取屏幕、导出日志。支持多设备批量安装 APK、停止后续安装并继续未执行项。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/adb-device-desk",
         "secondaryAction": "下载预览版",
-        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.4",
+        "secondaryHref": "https://github.com/TolkmisLK/adb-device-desk/releases/tag/v0.1.0-preview.5",
         "details": [
           [
             "技术栈",
@@ -327,13 +343,13 @@
         "useCase": "管理安卓设备"
       },
       {
-        "status": "命令行预览版 · v0.2.0-preview.1",
+        "status": "命令行预览版 · v0.2.0-preview.2",
         "name": "循迹 · MCP 调用排障",
         "description": "记录 MCP 客户端与 stdio 服务之间的通信。通过命令行摘要或离线 HTML 报告，查看工具调用、失败原因和响应耗时。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
         "secondaryAction": "下载安装包",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/releases/tag/v0.2.0-preview.1",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/releases/tag/v0.2.0-preview.2",
         "details": [
           [
             "技术栈",
@@ -358,9 +374,9 @@
         "useCase": "排查工具调用"
       },
       {
-        "status": "开发预览",
+        "status": "Windows / Web 预览版 · v0.1.0-preview.2",
         "name": "聊聊 · 即时通信",
-        "description": "基于 Matrix 的文字聊天客户端，支持会话恢复与本地搜索。可以独立运行，也可以作为面板嵌入其他页面。",
+        "description": "基于 Matrix 的文字聊天客户端，支持会话恢复、失败消息重试与本地搜索。可以独立运行，也可以作为面板嵌入其他页面。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mutual_chat",
         "secondaryAction": "嵌入说明",
@@ -381,6 +397,10 @@
         ],
         "resources": [
           {
+            "label": "下载桌面与网页包",
+            "href": "https://github.com/TolkmisLK/mutual_chat/releases/tag/v0.1.0-preview.2"
+          },
+          {
             "label": "启动接入示例",
             "href": "https://github.com/TolkmisLK/mutual_chat/blob/main/examples/embed-host/README.md"
           }
@@ -389,9 +409,9 @@
         "useCase": "接入聊天界面"
       },
       {
-        "status": "开发预览",
+        "status": "Windows 预览版 · v0.1.0-preview.1",
         "name": "随传 · 局域网文件传输",
-        "description": "让电脑和手机通过局域网共享文件，支持上传断点续传、文件校验和配对设备管理。",
+        "description": "让电脑和手机通过局域网共享文件，支持上传断点续传、取消上传、文件校验和配对设备管理。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/Mutual_transfer",
         "secondaryAction": "截图教程",
@@ -411,6 +431,10 @@
           ]
         ],
         "resources": [
+          {
+            "label": "下载 Windows 服务包",
+            "href": "https://github.com/TolkmisLK/Mutual_transfer/releases/tag/windows-v0.1.0-preview.1"
+          },
           {
             "label": "Android 预览版",
             "href": "https://github.com/TolkmisLK/Mutual_transfer/releases/tag/android-v0.1.1-preview"
