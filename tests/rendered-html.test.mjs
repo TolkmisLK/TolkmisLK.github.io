@@ -40,6 +40,10 @@ test("keeps navigation and project links valid for the configured content", () =
   assert.match(html, /<main[^>]+id="top"[^>]+tabindex="-1"/);
   for (const project of profile.projects) {
     assert.ok(html.includes(escape(project.name)));
+    if (project.id) {
+      assert.ok(html.includes(`id="project-${project.id}"`));
+      assert.ok(html.includes(`href="#project-${project.id}"`));
+    }
     for (const url of [project.primaryHref, project.secondaryHref])
       assert.ok(html.includes(`href="${escape(url)}"`));
   }

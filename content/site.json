@@ -70,7 +70,9 @@
             "label": "Recovery drill",
             "href": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/controlled-drill.md"
           }
-        ]
+        ],
+        "id": "relay",
+        "useCase": "Deliver events"
       },
       {
         "status": "Windows preview · v0.1.0-preview.4",
@@ -99,16 +101,18 @@
             "label": "User guide",
             "href": "https://github.com/TolkmisLK/adb-device-desk/blob/main/docs/USER-GUIDE.zh-CN.md"
           }
-        ]
+        ],
+        "id": "device",
+        "useCase": "Manage Android devices"
       },
       {
-        "status": "Experimental source · v0.1.0",
+        "status": "CLI preview · v0.2.0-preview.1",
         "name": "Call Trace · MCP Diagnostics",
         "description": "Records traffic between an MCP client and a stdio server. Inspect tool calls, failures and response times in a command-line summary or an offline HTML report.",
         "primaryAction": "Source code",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
-        "secondaryAction": "Local example",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
+        "secondaryAction": "Download CLI package",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/releases/tag/v0.2.0-preview.1",
         "details": [
           [
             "Built with",
@@ -128,7 +132,9 @@
             "label": "Offline report guide",
             "href": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/html-report.md"
           }
-        ]
+        ],
+        "id": "trace",
+        "useCase": "Inspect tool calls"
       },
       {
         "status": "Development preview",
@@ -157,7 +163,9 @@
             "label": "Run the host example",
             "href": "https://github.com/TolkmisLK/mutual_chat/blob/main/examples/embed-host/README.md"
           }
-        ]
+        ],
+        "id": "chat",
+        "useCase": "Embed a chat interface"
       },
       {
         "status": "Development preview",
@@ -190,7 +198,9 @@
             "label": "Computer setup",
             "href": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/WINDOWS-PORTABLE.md"
           }
-        ]
+        ],
+        "id": "transfer",
+        "useCase": "Transfer files"
       },
       {
         "status": "Template",
@@ -213,7 +223,9 @@
             "Included",
             "English and Chinese, light and dark themes, mobile layout"
           ]
-        ]
+        ],
+        "id": "site",
+        "useCase": "Build a personal page"
       }
     ]
   },
@@ -279,7 +291,9 @@
             "label": "故障恢复演练",
             "href": "https://github.com/TolkmisLK/webhook-delivery-platform/blob/main/docs/controlled-drill.md"
           }
-        ]
+        ],
+        "id": "relay",
+        "useCase": "发送通知"
       },
       {
         "status": "Windows 预览版 · v0.1.0-preview.4",
@@ -308,16 +322,18 @@
             "label": "中文使用教程",
             "href": "https://github.com/TolkmisLK/adb-device-desk/blob/main/docs/USER-GUIDE.zh-CN.md"
           }
-        ]
+        ],
+        "id": "device",
+        "useCase": "管理安卓设备"
       },
       {
-        "status": "实验阶段源码 · v0.1.0",
+        "status": "命令行预览版 · v0.2.0-preview.1",
         "name": "循迹 · MCP 调用排障",
         "description": "记录 MCP 客户端与 stdio 服务之间的通信。通过命令行摘要或离线 HTML 报告，查看工具调用、失败原因和响应耗时。",
         "primaryAction": "查看代码",
         "primaryHref": "https://github.com/TolkmisLK/mcp-trace-lab",
-        "secondaryAction": "本地示例",
-        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/demo.md",
+        "secondaryAction": "下载安装包",
+        "secondaryHref": "https://github.com/TolkmisLK/mcp-trace-lab/releases/tag/v0.2.0-preview.1",
         "details": [
           [
             "技术栈",
@@ -337,7 +353,9 @@
             "label": "离线报告指南",
             "href": "https://github.com/TolkmisLK/mcp-trace-lab/blob/main/docs/html-report.md"
           }
-        ]
+        ],
+        "id": "trace",
+        "useCase": "排查工具调用"
       },
       {
         "status": "开发预览",
@@ -366,7 +384,9 @@
             "label": "启动接入示例",
             "href": "https://github.com/TolkmisLK/mutual_chat/blob/main/examples/embed-host/README.md"
           }
-        ]
+        ],
+        "id": "chat",
+        "useCase": "接入聊天界面"
       },
       {
         "status": "开发预览",
@@ -399,7 +419,9 @@
             "label": "电脑端使用说明",
             "href": "https://github.com/TolkmisLK/Mutual_transfer/blob/main/docs/WINDOWS-PORTABLE.md"
           }
-        ]
+        ],
+        "id": "transfer",
+        "useCase": "在设备间传文件"
       },
       {
         "status": "模板",
@@ -422,7 +444,9 @@
             "已包含",
             "中英文、深浅主题和手机布局"
           ]
-        ]
+        ],
+        "id": "site",
+        "useCase": "搭建个人主页"
       }
     ]
   }

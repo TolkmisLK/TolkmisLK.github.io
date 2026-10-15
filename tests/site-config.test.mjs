@@ -14,6 +14,18 @@ test("accepts a beginner profile with no projects and no images", () => {
   assert.doesNotThrow(() => validateSite(example));
 });
 
+test("shareable project ids remain valid and aligned across translations", () => {
+  const config = structuredClone(example);
+  const project = { id: "transfer", useCase: "Transfer files", name: "Example", status: "Preview", description: "A project", primaryAction: "Source", primaryHref: "https://example.com", secondaryAction: "Guide", secondaryHref: "https://example.com/guide", details: [] };
+  config.en.projects = [structuredClone(project)];
+  config.zh.projects = [structuredClone(project)];
+  assert.doesNotThrow(() => validateSite(config));
+  config.zh.projects[0].id = "different";
+  assert.throws(() => validateSite(config), /ids and order/);
+  config.zh.projects[0].id = "bad#anchor";
+  assert.throws(() => validateSite(config), /lowercase project id/);
+});
+
 test("reports the field when a project link uses an unsafe scheme", () => {
   const config = structuredClone(example);
   config.en.projects = [

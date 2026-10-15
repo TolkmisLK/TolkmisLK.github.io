@@ -6,6 +6,7 @@ import { StudioScene } from "./studio-scene";
 import { DeliveryDemo } from "./delivery-demo";
 import { AdbDemo, McpDemo, TransferDemo, ChatDemo } from "./project-demos";
 import { StudioEffects, useMotionEnvironment } from "./studio-effects";
+import { ProjectShare } from "./project-share";
 import "./studio.css";
 
 type Locale = "en" | "zh";
@@ -94,7 +95,8 @@ export function Portfolio() {
 
   useEffect(() => {
     const syncSavedPreferences = () => {
-      const savedLocale = readPreference("ncc-locale");
+      const linkedLocale = new URLSearchParams(window.location.search).get("lang");
+      const savedLocale = linkedLocale === "en" || linkedLocale === "zh" ? linkedLocale : readPreference("ncc-locale");
       const savedTheme = readPreference("ncc-theme");
       setMotionAllowed(readPreference("ncc-motion") !== "off");
 
@@ -125,6 +127,9 @@ export function Portfolio() {
     const nextLocale: Locale = locale === "en" ? "zh" : "en";
     setLocale(nextLocale);
     savePreference("ncc-locale", nextLocale);
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", nextLocale);
+    window.history.replaceState(null, "", url);
   }
 
   function cycleTheme() {
@@ -242,19 +247,31 @@ export function Portfolio() {
               <div><p className="section-number">01 / PROJECTS</p><h2 id="work-title">{content.workTitle}</h2></div>
               <p className="section-note">{content.workNote}</p>
             </div>
+            <nav className="project-index" aria-label={locale === "zh" ? "项目索引" : "Project index"}>
+              {content.projects.map((project, index) => (
+                <a key={project.id ?? index} href={`#project-${project.id ?? index + 1}`}>
+                  <span className="project-index-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{project.useCase ?? project.name}</strong>
+                  <span>{project.name}</span>
+                </a>
+              ))}
+            </nav>
             <div className="work-list">
-              {content.projects.map((project) => (
+              {content.projects.map((project, index) => (
                 <article
+                  id={`project-${project.id ?? index + 1}`}
+                  tabIndex={-1}
+                  aria-labelledby={`project-title-${project.id ?? index + 1}`}
                   className={
                     project.details.length
                       ? "work-card"
                       : "work-card work-card--summary"
                   }
-                  key={project.name}
+                  key={project.id ?? index}
                 >
                   <div className="work-summary">
                     <p className="work-kicker">{project.status}</p>
-                    <h3>{project.name}</h3>
+                    <h3 id={`project-title-${project.id ?? index + 1}`}>{project.name}</h3>
                     <p>{project.description}</p>
                     <div className="work-actions">
                       <a
@@ -283,6 +300,7 @@ export function Portfolio() {
                         ))}
                       </nav>
                     )}
+                    <ProjectShare id={`project-${project.id ?? index + 1}`} locale={locale} />
                   </div>
                   {project.details.length > 0 && (
                     <dl className="project-details">
