@@ -1,6 +1,8 @@
 import rawSite from "../content/site.json";
 
 type Project = {
+  id?: string;
+  useCase?: string;
   status: string;
   name: string;
   description: string;

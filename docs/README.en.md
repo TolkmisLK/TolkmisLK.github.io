@@ -150,3 +150,5 @@ Open [Issues](https://github.com/TolkmisLK/TolkmisLK.github.io/issues/new/choose
 ## License
 
 [MIT](../LICENSE). You may copy, modify, and publish your version; keep the copyright notice in the license. Your page does not have to display NCC branding or link back to the original.
+
+Projects accept an optional stable lowercase `id` and a localized `useCase` label for the project index. Keep the project count and order aligned across languages. Use the same `id` in both languages, or the same `primaryHref` when the ID is omitted. Preserve published IDs or project URLs to keep shared links working. Shared links include `?lang=en` or `?lang=zh`, which takes priority over saved preferences. If clipboard access is unavailable, the page shows both a labeled direct link and a selectable read-only URL; focus the URL and press Ctrl+C to copy it.

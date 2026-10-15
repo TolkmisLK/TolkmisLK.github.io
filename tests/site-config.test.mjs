@@ -14,6 +14,34 @@ test("accepts a beginner profile with no projects and no images", () => {
   assert.doesNotThrow(() => validateSite(example));
 });
 
+test("shareable project ids remain valid and aligned across translations", () => {
+  const config = structuredClone(example);
+  const project = { id: "transfer", useCase: "Transfer files", name: "Example", status: "Preview", description: "A project", primaryAction: "Source", primaryHref: "https://example.com", secondaryAction: "Guide", secondaryHref: "https://example.com/guide", details: [] };
+  config.en.projects = [structuredClone(project)];
+  config.zh.projects = [structuredClone(project)];
+  assert.doesNotThrow(() => validateSite(config));
+  config.zh.projects[0].id = "different";
+  assert.throws(() => validateSite(config), /count and order/);
+  config.zh.projects[0].id = "bad#anchor";
+  assert.throws(() => validateSite(config), /lowercase project id/);
+});
+
+test("idless projects use their URLs to keep translations aligned", () => {
+  const config = structuredClone(example);
+  const project = { name: "Example", status: "Preview", description: "A project", primaryAction: "Source", primaryHref: "https://example.com/project", secondaryAction: "Guide", secondaryHref: "https://example.com/project/guide", details: [] };
+  config.en.projects = [structuredClone(project)];
+  config.zh.projects = [{ ...structuredClone(project), name: "示例" }];
+  assert.doesNotThrow(() => validateSite(config));
+  config.zh.projects = [];
+  assert.throws(() => validateSite(config), /count and order/);
+  config.zh.projects = [{ ...structuredClone(project), primaryHref: "https://example.com/other" }];
+  assert.throws(() => validateSite(config), /count and order/);
+  const other = { ...structuredClone(project), name: "Other", primaryHref: "https://example.com/other" };
+  config.en.projects = [structuredClone(project), structuredClone(other)];
+  config.zh.projects = [structuredClone(other), structuredClone(project)];
+  assert.throws(() => validateSite(config), /count and order/);
+});
+
 test("reports the field when a project link uses an unsafe scheme", () => {
   const config = structuredClone(example);
   config.en.projects = [
@@ -44,6 +72,7 @@ test("optional resource links reject unsafe, duplicate and excessive entries", (
   const config = structuredClone(example);
   const project = { name: "Example", status: "Preview", description: "A project", primaryAction: "Source", primaryHref: "https://example.com", secondaryAction: "Guide", secondaryHref: "https://example.com/guide", details: [] };
   config.en.projects = [project];
+  config.zh.projects = [structuredClone(project)];
   assert.doesNotThrow(() => validateSite(config));
   project.resources = [{ label: "Download", href: "https://example.com/download" }];
   assert.doesNotThrow(() => validateSite(config));

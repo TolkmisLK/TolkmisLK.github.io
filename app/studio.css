@@ -216,3 +216,18 @@ html[data-motion="off"] *, html[data-motion="off"] *::before, html[data-motion="
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+.project-index { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:0 0 30px; }
+.project-index a { min-height:112px; display:flex; flex-direction:column; gap:5px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); text-decoration:none; color:var(--foreground); }
+.project-index a:hover { border-color:var(--accent); background:var(--accent-soft); }
+.project-index a:focus-visible,.project-share-button:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.project-index a > span:last-child { font-size:.75rem; color:var(--muted); overflow-wrap:anywhere; }
+.project-index-number { color:var(--warm); font-size:.7rem; font-variant-numeric:tabular-nums; }
+.work-card { scroll-margin-top:145px; }
+.work-card:target { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-soft),var(--shadow); }
+.project-share { display:flex; flex-wrap:wrap; align-items:center; column-gap:12px; margin-top:10px; font-size:.75rem; }
+.project-share-button { min-height:44px; padding:4px 0; border:0; background:transparent; color:var(--accent); cursor:pointer; font:inherit; }
+.project-share [role="status"] { color:var(--muted); }
+.project-share a { color:var(--accent); overflow-wrap:anywhere; }
+.project-share-url { flex:1 1 100%; min-width:0; padding:9px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--foreground); font:inherit; }
+.project-share-url:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }

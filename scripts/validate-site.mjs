@@ -93,10 +93,17 @@ export function validateSite(config) {
     if (!Array.isArray(profile.projects))
       fail(`${locale}.projects`, "应为列表 / expected an array");
     const names = new Set();
+    const ids = new Set();
     for (const [index, project] of profile.projects.entries()) {
       const path = `${locale}.projects[${index}]`;
       if (!project || typeof project !== "object")
         fail(path, "需要项目对象 / expected a project object");
+      if (project.id !== undefined) {
+        if (typeof project.id !== "string" || !/^[a-z][a-z0-9-]{0,39}$/.test(project.id) || ids.has(project.id))
+          fail(`${path}.id`, "需要唯一的小写项目标识 / use a unique lowercase project id");
+        ids.add(project.id);
+      }
+      if (project.useCase !== undefined) text(project.useCase, `${path}.useCase`);
       for (const key of [
         "name",
         "status",
@@ -127,6 +134,15 @@ export function validateSite(config) {
       pairs(project.details, `${path}.details`);
     }
   }
+  const projectKeys = (locale) =>
+    config[locale].projects.map(
+      (project) => project.id ?? new URL(project.primaryHref).href,
+    );
+  if (JSON.stringify(projectKeys("en")) !== JSON.stringify(projectKeys("zh")))
+    fail(
+      "projects",
+      "两种语言的项目数量与顺序须一致；请使用相同 id，未填写 id 时须使用相同项目网址 / project count and order must match across locales; use matching ids, or matching project URLs when ids are omitted",
+    );
 }
 
 if (
