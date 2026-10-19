@@ -10,8 +10,8 @@
   },
   "en": {
     "role": "Software developer",
-    "subtitle": "Tools for delivery, devices and MCP debugging",
-    "intro": "I build tools that retry webhook deliveries, help inspect Android devices, and trace MCP calls. Explore the projects below.",
+    "subtitle": "Tools for table checks, delivery, devices and MCP debugging",
+    "intro": "I build tools that compare CSV and XLSX lists, retry webhook deliveries, help inspect Android devices, and trace MCP calls. Explore the projects below.",
     "experienceCopy": "My projects span web consoles, backend services, Windows desktop apps and command-line tools. Each project links to its setup steps and current limits.",
     "focus": [
       [
@@ -43,6 +43,45 @@
       ]
     ],
     "projects": [
+      {
+        "status": "Browser preview · v0.1.0-preview.1",
+        "name": "Table Check · Compare Lists",
+        "description": "Compare two CSV or basic XLSX lists by a unique ID. Review added, removed and changed rows with field-level before/after values, then download a CSV or JSON report. Files stay in the browser.",
+        "primaryAction": "Open Table Check",
+        "primaryHref": "https://tolkmislk.github.io/duibiao/",
+        "secondaryAction": "Source code",
+        "secondaryHref": "https://github.com/TolkmisLK/duibiao",
+        "details": [
+          [
+            "Input",
+            "CSV and basic XLSX, with worksheet selection"
+          ],
+          [
+            "Matching",
+            "One unique ID column; empty and duplicate IDs are reported"
+          ],
+          [
+            "Privacy",
+            "Local browser processing with no file upload by the app"
+          ]
+        ],
+        "resources": [
+          {
+            "label": "Open with example data",
+            "href": "https://tolkmislk.github.io/duibiao/?example=1"
+          },
+          {
+            "label": "Chinese guide",
+            "href": "https://github.com/TolkmisLK/duibiao/blob/main/docs/USER-GUIDE.zh-CN.md"
+          },
+          {
+            "label": "English overview",
+            "href": "https://github.com/TolkmisLK/duibiao/blob/main/docs/README.en.md"
+          }
+        ],
+        "id": "compare",
+        "useCase": "Compare table versions"
+      },
       {
         "status": "Source preview · v1.1.0-preview.1",
         "name": "Relay · Reliable Webhook Delivery",
@@ -243,8 +282,8 @@
   },
   "zh": {
     "role": "软件开发者",
-    "subtitle": "事件投递、设备工具与 MCP 排障",
-    "intro": "我做 Webhook 可靠投递、安卓设备管理和 MCP 调用排障工具。可以从下面的项目看起。",
+    "subtitle": "表格核对、事件投递、设备工具与 MCP 排障",
+    "intro": "我做 CSV/XLSX 表格核对、Webhook 可靠投递、安卓设备管理和 MCP 调用排障工具。可以从下面的项目看起。",
     "experienceCopy": "这些项目涉及网页控制台、后端服务、Windows 桌面应用和命令行工具。各项目都附有使用方法与当前限制。",
     "focus": [
       [
@@ -276,6 +315,45 @@
       ]
     ],
     "projects": [
+      {
+        "status": "浏览器预览版 · v0.1.0-preview.1",
+        "name": "对表·表格差异核对",
+        "description": "按唯一编号核对两份 CSV 或基础 XLSX 清单，查看新增、删除和修改记录及字段前后值，再下载 CSV 或 JSON 报告。文件只在浏览器本地处理。",
+        "primaryAction": "打开对表",
+        "primaryHref": "https://tolkmislk.github.io/duibiao/",
+        "secondaryAction": "查看源码",
+        "secondaryHref": "https://github.com/TolkmisLK/duibiao",
+        "details": [
+          [
+            "输入",
+            "CSV 和基础 XLSX，可选择工作表"
+          ],
+          [
+            "对齐方式",
+            "选择一列唯一编号，并诊断空编号和重复编号"
+          ],
+          [
+            "隐私",
+            "浏览器本地处理，应用不会上传文件"
+          ]
+        ],
+        "resources": [
+          {
+            "label": "载入示例数据",
+            "href": "https://tolkmislk.github.io/duibiao/?example=1"
+          },
+          {
+            "label": "中文使用指南",
+            "href": "https://github.com/TolkmisLK/duibiao/blob/main/docs/USER-GUIDE.zh-CN.md"
+          },
+          {
+            "label": "English overview",
+            "href": "https://github.com/TolkmisLK/duibiao/blob/main/docs/README.en.md"
+          }
+        ],
+        "id": "compare",
+        "useCase": "核对表格版本"
+      },
       {
         "status": "源码预览版 · v1.1.0-preview.1",
         "name": "信使 · Webhook 可靠投递",
